@@ -1,0 +1,3165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Geoway.ADF.GIS.Utility</name>
+    </assembly>
+    <members>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormSpatialReference.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormSpatialReference.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormSpatialReference.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormSpatialReference.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.enumFeatureRendererType">
+            <summary>
+            矢量渲染类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumFeatureRendererType.Simple">
+            <summary>
+            单一渲染风格
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumFeatureRendererType.UniqueValueRender">
+            <summary>
+            唯一值渲染风格
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumFeatureRendererType.ProportionalRender">
+            <summary>
+            比重渲染风格
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumFeatureRendererType.DensityRender">
+            <summary>
+            密度渲染风格
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumFeatureRendererType.ChartRender">
+            <summary>
+            图表渲染风格
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumFeatureRendererType.ClassBreaks">
+            <summary>
+            分级符号化
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.enumRasterRendererType">
+            <summary>
+            影像渲染类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumRasterRendererType.ColormapRenderer">
+            <summary>
+            色域渲染
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumRasterRendererType.RGBRenderer">
+            <summary>
+            红绿蓝渲染
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumRasterRendererType.StretchColorRampRenderer">
+            <summary>
+            色彩拉伸渲染
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumRasterRendererType.UniqueValueRenderer">
+            <summary>
+            唯一值渲染
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumRasterRendererType.ClassifyColorRampRenderer">
+            <summary>
+            色域分类渲染
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.enumESRIDatasetType">
+            <summary>
+            新建数据类型的描述
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.Create_SimpleFeatureClass(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,Geoway.ADF.GIS.Utility.enumESRIDatasetType,ESRI.ArcGIS.Geodatabase.IFields,System.Boolean,System.String)">
+            <summary>
+            创建简单要素类
+            </summary>
+            <param name="pName">要素类名称</param>
+            <param name="pFileType">要素类类型</param>
+            <param name="pFlds">字段集合</param>
+            <param name="isDset">所在文件是否为要素集</param>
+            <param name="pDsetName">要素集的名称</param>
+            <returns>简单要素类对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.Create_AnnoFeatureClass(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geodatabase.IFields,ESRI.ArcGIS.Carto.IGraphicsLayerScale,System.Boolean,System.String)">
+            <summary>
+            创建注记要素类
+            </summary>
+            <param name="pName">要素类名称</param>
+            <param name="pFlds">字段集合</param>
+            <param name="pGrapLyrScale">比例尺对象</param>
+            <param name="isDset">所在文件是否为要素集</param>
+            <param name="pDsetName">要素集的名称</param>
+            <returns>注记要素类对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.Create_AnnoFeatureClass(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geodatabase.IFields,ESRI.ArcGIS.Carto.IGraphicsLayerScale,System.Boolean,System.String,System.String)">
+            <summary>
+            创建注记要素类
+            </summary>
+            <param name="pName">要素类名称</param>
+            <param name="pFlds">字段集合</param>
+            <param name="pReferenceScale">参考比例尺</param>
+            <param name="pUnit">地图单位</param>
+            <param name="isDset">所在文件是否为要素集</param>
+            <param name="pDsetName">要素集的名称</param>
+            <returns>注记要素类对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.Create_AnnoFeatureClass(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geodatabase.IFields,System.Double,ESRI.ArcGIS.esriSystem.esriUnits,System.Boolean,System.String)">
+            <summary>
+            创建注记要素类
+            </summary>
+            <param name="pName">要素类名称</param>
+            <param name="pFlds">字段集合</param>
+            <param name="pReferenceScale">参考比例尺</param>
+            <param name="pUnit">地图单位</param>
+            <param name="isDset">所在文件是否为要素集</param>
+            <param name="pDsetName">要素集的名称</param>
+            <returns>注记要素类对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.Create_FeatureDset(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            创建要素集
+            </summary>
+            <param name="pName">名称</param>
+            <param name="pSpaRef">空间参考</param>
+            <returns>要素集对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.Create_Table(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geodatabase.IFields)">
+            <summary>
+            创建数据表
+            </summary>
+            <param name="pName">数据表名称</param>
+            <param name="pFlds">字段集合</param>
+            <returns>数据表对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.get_FeatClass_Access(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            获取要素类：通过指定工作空间对象和要素类名称
+            </summary>
+            <param name="pPath">工作空间对象</param>
+            <param name="pName">要素类名称</param>
+            <returns>要素类对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.get_FeatClass_Access(System.String,System.String)">
+            <summary>
+            获取要素类：通过指定工作空间路径和要素类名称
+            </summary>
+            <param name="pPath">工作空间路径</param>
+            <param name="pName">要素类名称</param>
+            <returns>要素类对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.get_FeatDset_Access(System.String,System.String)">
+            <summary>
+            获取要素集
+            </summary>
+            <param name="pPath">工作空间路径</param>
+            <param name="pDsetName">要素集名称</param>
+            <returns>要素集对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.get_FeatDset_Access(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            获取要素集
+            </summary>
+            <param name="pPath">工作空间对象</param>
+            <param name="pDsetName">要素集名称</param>
+            <returns>要素集对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureClassUtil.get_Table_Access(System.String,System.String)">
+            <summary>
+            获取数据表：通过指定工作空间路径和数据表名称
+            </summary>
+            <param name="pPath">工作空间路径</param>
+            <param name="pName">数据表名称</param>
+            <returns>数据表对象</returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.LayerUtil">
+            <summary>
+            ILayer操作集合
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.LayerUtil.Zoom2Layer(ESRI.ArcGIS.Carto.IActiveView,ESRI.ArcGIS.Carto.ILayer)">
+            <summary>
+            缩放到图层范围
+            </summary>
+            <param name="activeView"></param>
+            <param name="layer"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.LayerUtil.LayerOnVisibleScale(System.Double,ESRI.ArcGIS.Carto.ILayer)">
+            <summary>
+            图层是否在可见比例尺范围内
+            </summary>
+            <param name="mapScale"></param>
+            <param name="layer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.LayerUtil.Zoom2LayerVisibleScale(ESRI.ArcGIS.Carto.IActiveView,ESRI.ArcGIS.Carto.ILayer)">
+            <summary>
+            缩放到图层可见比例尺范围
+            </summary>
+            <param name="activeView"></param>
+            <param name="layer"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.ReconnectEvents">
+            <summary>
+            重连事件
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.ReconnectEvents.IsNeedReConnect">
+            <summary>
+            是否需要重连
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.ReconnectEvents.SleepTime">
+            <summary>
+            休眠时间(单位s)
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.ReconnectEvents.ReOpenWorkspace(System.Object)">
+            <summary>
+            是否重连workspace
+            </summary>
+            <param name="reConnectWorkspace"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.ReConnectWorkspace">
+            <summary>
+            需要重新连接的Workspace
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.ReConnectWorkspace.GetReconnectNum">
+            <summary>
+            获取重连的次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.ReConnectWorkspace.ConnectUnSuccessfulNum">
+            <summary>
+            连接失败的次数
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.ReConnectWorkspace.IsConnectError">
+            <summary>
+            连接错误
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.ReConnectWorkspaceUtil.IsWorkspaceDown(System.String)">
+            <summary>
+            是否工作空间关闭
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.ScreenDPIUtil">
+            <summary>
+            用户显示器DPI操作
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.ScreenDPIUtil.GetScreenDPI(System.Int32@,System.Int32@)">
+            <summary>
+            获取用户显示器DPI
+            </summary>
+            <param name="xDpi">返回x方向DPI</param>
+            <param name="yDpi">返回y方向DPI</param>
+            <remarks>该方法依赖系统文件user32.dll和gdi32.dll，如果过调用失败，则返回默认值 96</remarks>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.SymbolUtil">
+            <summary>
+            符号操作工具类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetSimpleMarkerSymbol(System.Drawing.Color,System.Int32,ESRI.ArcGIS.Display.esriSimpleMarkerStyle)">
+            <summary>
+            构造点状符号化标记
+            </summary>
+            <param name="color">颜色</param>
+            <param name="size">大小</param>
+            <param name="style">形状</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetSimpleLineSymbol(System.Drawing.Color,System.Int32,ESRI.ArcGIS.Display.esriSimpleLineStyle)">
+            <summary>
+            构造一个新的线状要素符号化标记对象
+            </summary>
+            <param name="color">颜色</param>
+            <param name="width">线宽</param>
+            <param name="style">线的风格</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetSimpleFillSymbol(System.Drawing.Color,System.Int32,ESRI.ArcGIS.Display.esriSimpleFillStyle)">
+            <summary>
+            构造面状充符号化标记对象
+            </summary>
+            <param name="FillColor">填充颜色</param>
+            <param name="outlineWidth">外框宽度</param>
+            <param name="style">填充风格</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.DrawSymbol(System.Int32,System.Int32,System.Int32,ESRI.ArcGIS.Display.ISymbol,System.Int32)">
+            <summary>
+            绘制符号
+            </summary>
+            <param name="hDC"></param>
+            <param name="w"></param>
+            <param name="h"></param>
+            <param name="pSymbol"></param>
+            <param name="gap"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.Symbol2Bitmap(System.Int32,System.Int32,ESRI.ArcGIS.Display.ISymbol,System.Int32)">
+            <summary>
+            此函数效率较低，生成单个符号时使用
+            </summary>
+            <param name="w"></param>
+            <param name="h"></param>
+            <param name="pSymbol"></param>
+            <param name="gap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetSymbolBitMap(ESRI.ArcGIS.Display.ISymbol,System.Int32,System.Int32)">
+            <summary>
+            根据符号生成图标
+            </summary>
+            <param name="pSymbol"></param>
+            <param name="nWidth"></param>
+            <param name="nHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.PreviewItem(ESRI.ArcGIS.Display.ISymbol,System.Int32,System.Int32)">
+            <summary>
+            实现将Symbol转换为Bitmap
+            </summary>
+            <param name="Symbol">符号对象</param>
+            <param name="Width">宽度值</param>
+            <param name="Height">高度值</param>
+            <returns>图像对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetSymbolGeometry(ESRI.ArcGIS.Display.ISymbol,ESRI.ArcGIS.Geometry.IEnvelope)">
+            <summary>
+            根据符号类型得到相应的几何形体
+            </summary>
+            <param name="Symbol">符号对象</param>
+            <param name="Envelop">矩形对象</param>
+            <returns>几何形体对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRasterRenderTypeName(Geoway.ADF.GIS.Utility.enumRasterRendererType)">
+            <summary>
+            获取渲染类型名称
+            </summary>
+            <param name="pType">渲染类型</param>
+            <returns>渲染类型名称</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRasterRenderType(System.String)">
+            <summary>
+            根据名称获取渲染类型
+            </summary>
+            <param name="pType">类型名称</param>
+            <returns>渲染类型</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRasterRenderer(System.Int32)">
+            <summary>
+            通过栅格符号化类型编码,获取相应的符号化实例
+            </summary>
+            <param name="type">类型编码</param>
+            <returns>符号化实例</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRenderType(Geoway.ADF.GIS.Utility.enumRasterRendererType)">
+            <summary>
+            通过符号化类型，获取栅格渲染类型编码
+            </summary>
+            <param name="pType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRenderType(ESRI.ArcGIS.Carto.IRasterRenderer)">
+            <summary>
+            通过符号化实例，获取栅格渲染类型编码
+            </summary>
+            <param name="render"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRendererer(System.Int32)">
+            <summary>
+            通过要素符号化类型编码,获取相应的符号化实例
+            </summary>
+            <param name="type">类型编码</param>
+            <returns>符号化实例</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRendererTypeID(Geoway.ADF.GIS.Utility.enumFeatureRendererType)">
+            <summary>
+            获取渲染类型ID
+            </summary>
+            <param name="pType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.GetRenderType(ESRI.ArcGIS.Carto.IFeatureRenderer)">
+            <summary>
+            通过符号化实例，获取要素渲染类型编码
+            </summary>
+            <param name="render"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.ReadFileToRasterRenderer(System.String,System.Int32)">
+            <summary>
+            将栅格符号化文件恢复成为Render
+            </summary>
+            <param name="path">栅格符号化文件路径</param>
+            <param name="type">栅格符号化类型编码</param>
+            <returns>栅格符号化实例</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.ReadFileToRenderer(System.String,System.Int32)">
+            <summary>
+            将要素符号化文件恢复成为Render
+            </summary>
+            <param name="path">要素符号化文件路径</param>
+            <param name="type">要素符号化类型编码</param>
+            <returns>要素符号化实例</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.ReadFileToSymbol(System.String)">
+            <summary>
+            将要素符号化文件恢复成为Symbol 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.SaveSymbolToFile(ESRI.ArcGIS.Display.ISymbol,System.String)">
+            <summary>
+            将pStream转换成要素符号化文件
+            </summary>
+            <param name="pSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.SaveLayerToFile(System.String,ESRI.ArcGIS.Carto.ILayer)">
+            <summary>
+            将Render保存为文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="layer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.SaveRenderToFile(System.String,ESRI.ArcGIS.Carto.IFeatureRenderer)">
+            <summary>
+            将Render保存为文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="frender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SymbolUtil.SaveRenderToFile(System.String,ESRI.ArcGIS.Carto.IRasterRenderer)">
+            <summary>
+            上边函数的重载,用于影像渲染的保存
+            </summary>
+            <param name="fileName"></param>
+            <param name="frender"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.DataDicOperUtil">
+            <summary>
+            字典操作
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DataDicOperUtil.GetDataDicKeyAndName(System.String)">
+            <summary>
+            获取字典的关键字和名称
+            </summary>
+            <param name="dicName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DataDicOperUtil.FindDataDicKey(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            名称查询关键字
+            </summary>
+            <param name="dicNames"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DataDicOperUtil.GetFieldTranslate(System.String,System.String)">
+            <summary>
+            获取字段的翻译结果
+            </summary>
+            <param name="dataDic"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.enumDatum">
+            <summary>
+            大地基准
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumDatum.NoN">
+            <summary>
+            不支持的大地基准
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumDatum.B54">
+            <summary>
+            北京54
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumDatum.X80">
+            <summary>
+            西安80
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumDatum.W84">
+            <summary>
+            WGS-1984
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumDatum.C2K">
+            <summary>
+            CGCS2000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumDatum.HN">
+            <summary>
+            HNPMZB
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.enumMapScale">
+            <summary>
+            地图比例尺
+            </summary>
+        </member>
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.enumMapScale.None”忽略有格式错误的 XML 注释 -->
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.H002">
+            <summary>
+            1:200
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.H005">
+            <summary>
+            1:500
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.K001">
+            <summary>
+            1:1000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.K002">
+            <summary>
+            1:2000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.K005">
+            <summary>
+            1:5000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.K010">
+            <summary>
+            1:10000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.K025">
+            <summary>
+            1:25000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.K050">
+            <summary>
+            1:50000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W010">
+            <summary>
+            1:100000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W025">
+            <summary>
+            1:250000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W050">
+            <summary>
+            1:500000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W100">
+            <summary>
+            1:1000000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W400">
+            <summary>
+            1:4000000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W300">
+            <summary>
+            1:3000000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W1400">
+            <summary>
+            1:14000000
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumMapScale.W3300">
+            <summary>
+            1:33000000
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.enumPrjType">
+            <summary>
+            投影类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumPrjType.N">
+            <summary>
+            不支持的投影类型
+            </summary>
+        </member>
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.enumPrjType.G”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.enumPrjType.U”忽略有格式错误的 XML 注释 -->
+        <member name="T:Geoway.ADF.GIS.Utility.enumZoneType">
+            <summary>
+            分带方式
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumZoneType.NN">
+            <summary>
+            不支持的分带类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumZoneType.D3">
+            <summary>
+            3度分带加带号
+            </summary>
+        </member>
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.enumZoneType.X3”忽略有格式错误的 XML 注释 -->
+        <member name="F:Geoway.ADF.GIS.Utility.enumZoneType.D6">
+            <summary>
+            6度分带加带号
+            </summary>
+        </member>
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.enumZoneType.X6”忽略有格式错误的 XML 注释 -->
+        <member name="T:Geoway.ADF.GIS.Utility.MapID">
+            <summary>
+            图幅对象
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapID.#ctor(System.String,ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            城市级的图幅范围不能根据图幅号直接构造，只能从接图表中获取
+            </summary>
+            <param name="mapNO"></param>
+            <param name="geoFrame"></param>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.MapID.GetZoneNoFromMapNo(System.String,System.Int32,System.Int32@)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.MapID.IsMapIDValid(System.String)">
+            add by 陈建东 2009.9.30
+            <returns></returns>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.MapID.Datum">
+            <summary>
+            大地基准
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.MapID.MapScale">
+            <summary>
+            比例尺
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.MapID.Geometry">
+            <summary>
+            图幅范围
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.MapIDUtil">
+            <summary>
+            图幅实用工具
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.ValidMapNO(System.String,Geoway.ADF.GIS.Utility.enumMapScale@)">
+            <summary>
+            验证指定的图幅号是否合法
+            </summary>
+            <param name="sMapNO"></param>
+            <param name="iScale"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.ValidMapNO(System.String,Geoway.ADF.GIS.Utility.enumMapScale)">
+            <summary>
+            验证指定的图幅号是否合法
+            </summary>
+            <param name="sMapNO">图幅号</param>
+            <param name="iScale">所属比例尺</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.GetZoneNO(System.String,System.Int32@,System.Int32@)">
+            <summary>
+            根据图幅号获取该投影带的信息
+            </summary>
+            <param name="sMapNO"></param>
+            <param name="iZoneWidth"></param>
+            <param name="iZoneNO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.GetZoneNO(System.String,System.Int32@,System.Int32@,System.Double@)">
+            <summary>
+            根据图幅号获取该图幅所在的投影代号
+            </summary>
+            <param name="sMapNo">J47G038081</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.GetLBFormMapNO(System.String,System.Double@,System.Double@,System.Double@,System.Double@,Geoway.ADF.GIS.Utility.enumMapScale@)">
+            <summary>
+            根据图幅号，获取角点的经纬度坐标
+            图幅号在外面已经验证好
+            </summary>
+            <param name="sMapNO">G48G041008</param>
+            <param name="dSWX"></param>
+            <param name="dSWY"></param>
+            <param name="dNEX"></param>
+            <param name="dNEY"></param>
+            <param name="iScale"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.MapIDTrans(System.String,System.Boolean)">
+            <summary>
+            新旧图号转换
+            </summary>
+            <param name="MapID">要转换的图号</param>
+            <param name="bOldtoNew">是否旧图号到新图号转换</param>
+            <returns>返回转换后图号</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.GetMapIDs(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String)">
+            <summary>
+            获取指定任意范围内的图幅号集合
+            </summary>
+            <param name="pGeometry">指定的范围</param>
+            <param name="featureClass">索引图层.</param>
+            <param name="fieldNameOfFrame">存储图幅号信息的字段名.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.GetMapIDs(System.Int64,ESRI.ArcGIS.Geometry.IEnvelope)">
+            <summary>
+            获取指定矩形范围内的图幅号集合
+            </summary>
+            <param name="scaleFlag">比例尺.</param>
+            <param name="envelope">矩形范围.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.GetMapIDs(System.Int64,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            获取指定矩形范围内的图幅号集合
+            </summary>
+            <param name="scaleFlag">比例尺.</param>
+            <param name="dXmin">The xmin.</param>
+            <param name="dXmax">The xmax.</param>
+            <param name="dYmin">The ymin.</param>
+            <param name="dYmax">The ymax.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapIDUtil.GetNewMapNumByXY(System.Double,System.Double,System.Int64)">
+            <summary>
+            由经纬度和比例尺获得新图号
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="pScale"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusGeoSystem.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusGeoSystem.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusGeoSystem.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusGeoSystem.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusProjectSystem.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusProjectSystem.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusProjectSystem.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.FormCusProjectSystem.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.ucCusButton.#ctor">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.Private.SpatialReference.ucCusButton.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.ucCusButton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.ucCusButton.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.ArcGISLicenseManger">
+            <summary>
+            ArcGIS许可验证
+            </summary>
+            <remarks>提供ArcGIS许可验证操作的方法类</remarks>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.ArcGISLicenseManger.ExtensionSpatialAnalystChecked">
+            <summary>
+            空间分析许可
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.ArcGISLicenseManger.Extension3DAnalystChecked">
+            <summary>
+            三维分析许可
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.ArcGISLicenseManger.ExtensionNetworkChecked">
+            <summary>
+            网络分析许可
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.ArcGISLicenseManger.ExtensionDataInteroperabilityChecked">
+            <summary>
+            数据互操作许可
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.ArcGISLicenseManger.ExtensionMaplexChecked">
+            <summary>
+            高级标注许可
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.ArcGISLicenseManger.InitializeArcObjects">
+            <summary>
+            初始化ArcObjects的许可证
+            </summary>
+            <returns>是否通过</returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.MapUtil">
+            <summary>
+            地图操作实用工具
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetAllLayers2(ESRI.ArcGIS.Carto.IMap)">
+            <summary>
+            获得所有图层
+            </summary>
+            <param name="map">地图对象</param>
+            <returns>得所有图层列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetAllLayers(ESRI.ArcGIS.Carto.IMap)">
+            <summary>
+            获取地图上的所有IFeatureLayer图层
+            </summary>
+            <param name="map">地图对象</param>
+            <returns>所有IFeatureLaye列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetAllVisibleLayers(ESRI.ArcGIS.Carto.IMap)">
+            <summary>
+            获取所有可见的图层
+            </summary>
+            <param name="map"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetMxdLayers(System.String)">
+            <summary>
+            获取MXD文档下的所有简单图层 IFeatureLayer IRasterLayer
+            </summary>
+            <param name="mxdPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetGeometryFromSelectedElement(ESRI.ArcGIS.Carto.IMap)">
+            <summary>
+            获取地图中选择的元素图形
+            </summary>
+            <param name="pMap">地图对象</param>
+            <returns>选择的元素图形列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetGeometryFromSelectedFeature(ESRI.ArcGIS.Carto.IMap)">
+            <summary>
+            获取地图中选择的要素图形
+            </summary>
+            <param name="pMap">地图对象</param>
+            <returns>选择的要素图形列表</returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.MapUtil.GetGeometryFromSelectedElement(ESRI.ArcGIS.Carto.IMap,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.MapUtil.GetGeometryFromSelectedFeature(ESRI.ArcGIS.Carto.IMap,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.MapUtil.GetGeometryFromSelectedFeature(ESRI.ArcGIS.Carto.IMap,System.String,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.ConvertPixelsToMapUnits(ESRI.ArcGIS.Carto.IActiveView,System.Double)">
+            <summary>
+            屏幕单位到地图单位的转换
+            </summary>
+            <param name="pActiveView">视图窗口</param>
+            <param name="pixelUnits">屏幕单位</param>
+            <returns>对应的地图单位</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.ConvertPixelsToMapUnits(ESRI.ArcGIS.Display.IScreenDisplay,System.Double)">
+            <summary>
+            屏幕单位到地图单位的转换
+            </summary>
+            <param name="pScreenDisplay">屏幕视图对象</param>
+            <param name="pixelUnits">屏幕单位</param>
+            <returns>对应的地图单位</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetMapScale(ESRI.ArcGIS.Display.IScreenDisplay,ESRI.ArcGIS.Geometry.IEnvelope)">
+            <summary>
+            获取地图比例尺
+            </summary>
+            <param name="pScreenDisplay"></param>
+            <param name="enve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetExchangeDistance(System.Double,ESRI.ArcGIS.esriSystem.esriUnits,ESRI.ArcGIS.esriSystem.esriUnits)">
+            <summary>
+            单位变换
+            </summary>
+            <param name="distance"></param>
+            <param name="orginUnit"></param>
+            <param name="desUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetUnitByName(System.String)">
+            <summary>
+            通过单位名称获取单位
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetSeletedFeatures(ESRI.ArcGIS.Carto.IMap)">
+            <summary>
+            地图中选择的要素集
+            </summary>
+            <param name="map">地图</param>
+            <returns>选择的要素集</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetLayerFromMap(ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+            <summary>
+            通过地图找到对应的图层
+            </summary>
+            <param name="pMap"></param>
+            <param name="featureclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapUtil.GetMap(System.Object,ESRI.ArcGIS.Carto.IMap@)">
+            <summary>
+            获得IMap对象
+            </summary>
+            <param name="hook"></param>
+            <param name="map"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.VectorDataTransfer">
+            <summary>
+            图层级别的矢量数据拷贝类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataTransfer.CopyFeatures(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.ISpatialFilter,ESRI.ArcGIS.Geodatabase.IFeatureClass,Geoway.ADF.GIS.Utility.VectorTransferResult@)">
+            <summary>
+            
+            </summary>
+            <param name="srcFC">源要素类</param>
+            <param name="tarFC">目标要素类</param>
+            <param name="srcFilter">源要素类过滤条件</param>
+            <param name="transferResult">返回要素类转换结果</param>
+            <returns>是否拷贝完成</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataTransfer.CopyAnnotations(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.ISpatialFilter,ESRI.ArcGIS.Geodatabase.IFeatureClass,Geoway.ADF.GIS.Utility.VectorTransferResult@)">
+            <summary>
+            拷贝注记
+            </summary>
+            <param name="srcFC">源要素类</param>
+            <param name="tarFC">目标要素类</param>
+            <param name="srcFilter">源要素类过滤条件</param>
+            <param name="transferResult">返回该注记要素类转换结果</param>
+            <returns>是否拷贝成功</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataTransfer.IsNeedProject(ESRI.ArcGIS.Geometry.ISpatialReference,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            判断两个空间参考是否需要做投影处理,只有两个空间参考均不为空 且不一样时才返回true
+            </summary>
+            <param name="pOutSpatialReference">空间参考1</param>
+            <param name="pInSpatialReference">空间参考2</param>
+            <returns>相等,返回true</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataTransfer.GetCustomizeFields(ESRI.ArcGIS.Geodatabase.IFeatureClass@)">
+            <summary>
+            获取自定义字段名称列表
+            </summary>
+            <param name="fcSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataTransfer.IsTypeCompatial(ESRI.ArcGIS.Geodatabase.esriFieldType,ESRI.ArcGIS.Geodatabase.esriFieldType)">
+            <summary>
+            
+            </summary>
+            <param name="type1"></param>
+            <param name="type2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataTransfer.AnnoSymbolsInput(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.Boolean,System.Collections.Generic.Dictionary{System.Int32,System.Int32}@,System.Collections.Generic.Dictionary{System.Int32,ESRI.ArcGIS.Display.ISymbol}@)">
+            <summary>
+            使用名称标识符号的话，同名称的会统一符号；不使用名称标识符号的话，将会使用对象比较的方法来统一符号
+            目前暂使用名称标识
+            </summary>
+            <param name="srcFC"></param>
+            <param name="tarFC"></param>
+            <param name="useSymblName"></param>
+            <param name="useSymbol"></param>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.VectorDataTransfer.OnFeatureCopyError">
+            <summary>
+            拷贝过程错误事件
+            </summary>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.VectorDataTransfer.TransferEnd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.VectorDataTransfer.ProgressCountChanged">
+            <summary>
+            图层拷贝进度事件
+            </summary>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.VectorDataTransfer.ProgressPositionChanged">
+            <summary>
+            图层拷贝进度事件
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.VectorDataTransfer.FlashTag">
+            <summary>
+            内存缓冲提交Tag （默认每1000个要素提交一次）
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.VectorDataTransfer.IsModifyError">
+            <summary>
+            是否捕获图形错误并进行拓扑错误修正，默认为处理
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.VectorDataTransfer.SourceSpatialReference">
+            <summary>
+            源图层的空间参考
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.VectorDataTransfer.ProgressMessageEventHandler">
+            <summary>
+            进度消息事件
+            </summary>
+            <param name="sMessage"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.VectorTransferResult">
+            <summary>
+            矢量数据拷贝结果状态记录类
+            </summary>
+        </member>
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.VectorTransferResult.trgFCName”忽略有格式错误的 XML 注释 -->
+        <member name="F:Geoway.ADF.GIS.Utility.VectorTransferResult.srcFCName">
+            <summary>
+            源要素类名称
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.VectorTransferResult.totalFCount">
+            <summary>
+            待拷贝的要素总数
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.VectorTransferResult.completeFCount">
+            <summary>
+            拷贝成功的要素总数
+            </summary>
+        </member>
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.VectorTransferResult.startTime”忽略有格式错误的 XML 注释 -->
+        <member name="F:Geoway.ADF.GIS.Utility.VectorTransferResult.endTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <!-- 对于成员“F:Geoway.ADF.GIS.Utility.VectorTransferResult.transResultType”忽略有格式错误的 XML 注释 -->
+        <member name="T:Geoway.ADF.GIS.Utility.enumTransResultType">
+            <summary>
+            数据拷贝结果状态
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumTransResultType.NotBegin">
+            <summary>
+            还未开始（条件检查未通过）
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumTransResultType.PartialSuccess">
+            <summary>
+            部分完成(被中断)
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumTransResultType.CompleteWithError">
+            <summary>
+            全部完成(但中间出现错误)
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumTransResultType.CompleteSuccess">
+            <summary>
+            全部完成并成功(没有出现错误) 
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.GeometryUtil">
+            <summary>
+            几何对象操作
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.IsEqual(ESRI.ArcGIS.Geometry.IEnvelope,ESRI.ArcGIS.Geometry.IEnvelope)">
+            <summary>
+            判断两个矩形是否相等
+            </summary>
+            <param name="enve1">矩形范围对象1</param>
+            <param name="enve2">矩形范围对象2</param>
+            <returns>相等返回true，反之false</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CompareEnvelope(ESRI.ArcGIS.Geometry.IEnvelope,ESRI.ArcGIS.Geometry.IEnvelope)">
+            <summary>
+            比较两矩形范围对象是否相等
+            </summary>
+            <param name="pEnve1">矩形范围对象1</param>
+            <param name="pEnve2">矩形范围对象2</param>
+            <returns>相等返回true，反之false</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CombineEnvelope(ESRI.ArcGIS.Geodatabase.IEnumFeature)">
+            <summary>
+            得到要素集合的最新矩形范围
+            </summary>
+            <param name="enumFeat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.GetEnvelope(ESRI.ArcGIS.Geodatabase.IFeature)">
+            <summary>
+            得到要素的最小矩形范围
+            </summary>
+            <param name="feat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.GetExpandEnvelope(ESRI.ArcGIS.Geometry.IEnvelope)">
+            <summary>
+            得到放大的矩形范围对象
+            </summary>
+            <param name="pEnv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CombineEnvelope(System.Collections.IList)">
+            <summary>
+            得到要素列表的矩形范围
+            </summary>
+            <param name="featList">要素列表</param>
+            <returns>矩形范围</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.ExtentEnvelope(ESRI.ArcGIS.Geometry.IEnvelope,System.Double)">
+            <summary>
+            扩展矩形范围（个人推荐直接用IEnvelope对象的Expand（*,*,false）这个方法，不推荐使用此方法）
+            </summary>
+            <param name="envelope">矩形对象</param>
+            <param name="distance">向外扩展到距离</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CheckEnvelope(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            检查矩形范围是否正确
+            </summary>
+            <param name="Lx"></param>
+            <param name="Ly"></param>
+            <param name="Rx"></param>
+            <param name="Ry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.Env2Polygon(ESRI.ArcGIS.Geometry.IEnvelope)">
+            <summary>
+            矩形对象转变成多边形对象，解决矩形不能存储在面层中的异常
+            </summary>
+            <param name="pEnv">范围对象</param>
+            <returns>面图形对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.ConvertLineDirection(ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            线反向
+            </summary>
+            <param name="line">要反转的参考线对象</param>
+            <returns>与参考线对象方向相反的线对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.getGeometryByFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+            <summary>
+            通过FeatureClass获取几何体
+            </summary>
+            <param name="selFC"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.Convert2WKB(ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            转换为WKB
+            </summary>
+            <param name="geometry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreateFromWKB(System.Byte[])">
+            <summary>
+            WKB转换为Geometry
+            </summary>
+            <param name="wkb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreateFromWKT(System.String)">
+            <summary>
+            WKT串转换为AE的IGeometry接口
+            </summary>
+            <param name="strWKT">WKT格式几何数据字符串</param>
+            <returns>AE的IGeometry接口</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.Convert2WKT(ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            AE的IGeometry接口转换为WKT串  只支持二维
+            </summary>
+            <param name="pGeo">AE的IGeometry接口</param>
+            <returns>WKT格式几何数据字符串</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.Convert2WKT(ESRI.ArcGIS.Geometry.IGeometry,System.Boolean,System.Int32)">
+            <summary>
+            AE的IGeometry接口转换为WKT串  只支持二维
+            </summary>
+            <param name="pGeo">AE的IGeometry接口</param>
+            <param name="HasPrecision">是否指定double值精度</param>
+            <param name="nPrecision">double值精度(小数后N位)</param>
+            <returns>WKT格式几何数据字符串</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreatePoint(System.String)">
+            <summary>
+            根据坐标串生成点几何对象
+            </summary>
+            <param name="sCoordinates">点坐标串:x y</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreateMultiPoint(System.String)">
+            <summary>
+            根据坐标串生成多点几何对象
+            </summary>
+            <param name="sCoordinates">多点坐标串:x1 y1, x2 y2, x3 y3,......</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreateMultiPoint(System.String[])">
+            <summary>
+            根据坐标串生成多点几何对象
+            </summary>
+            <param name="sCoordinates">点坐标数组 点坐标串:x1 y1</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreatePolyline(System.String)">
+            <summary>
+            根据坐标串生成线几何对象
+            </summary>
+            <param name="sCoordinates">简单线坐标串:x1 y1, x2 y2, x3 y3,......</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreateMultiPolyline(System.String[])">
+            <summary>
+            根据坐标串生成多线几何对象
+            </summary>
+            <param name="sCoordinates">简单线坐标串数组   简单线坐标串:x1 y1, x2 y2, x3 y3,......</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.CreatePolygon(System.String[])">
+            <summary>
+            根据坐标串生成面几何对象
+            </summary>
+            <param name="sCoordinates">环坐标串数组,第一个环表示外环  环坐标串:x1 y1, x2 y2, x3 y3,......</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.ParseCoordinates(System.String,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            解析坐标串  (x1 y1,x2 y2,...),(x1 y1,x2 y2,...),... 或 (x1 y1,x2 y2,...)
+            </summary>
+            <param name="sCoordinates"></param>
+            <param name="lstPaths"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.GetSpatialReference">
+            <summary>
+            获取默认空间参考
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.ParseOrdinates(ESRI.ArcGIS.Geometry.IGeometry,System.String@,System.Boolean,System.Int32)">
+            <summary>
+            解析几何对象坐标信息
+            </summary>
+            <param name="pGeo">几何对象</param>
+            <param name="sWKT"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.PointCoordinate(ESRI.ArcGIS.Geometry.IPoint,System.Boolean,System.Int32)">
+            <summary>
+            点坐标
+            </summary>
+            <param name="pPt">点几何</param>
+            <returns>点几何转换坐标串：x y</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GeometryUtil.LineCoordinate(ESRI.ArcGIS.Geometry.IPointCollection,System.Boolean,System.Int32)">
+            <summary>
+            单部件线（Path、Ring、Line等）点坐标串
+            </summary>
+            <param name="pPtCol">点集合</param>
+            <returns>点几何转换坐标串：x1 y1,x2 y2,x3 y3,...</returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.EsriParseUtil">
+            <summary>
+            （部分）Esri类型解析
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.EsriParseUtil.GetUnit(ESRI.ArcGIS.esriSystem.esriUnits)">
+            <summary>
+            将地图单位转换为中文
+            </summary>
+            <param name="UnitType">单位类型</param>
+            <returns>中文名称</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.EsriParseUtil.GetAreaUnit(ESRI.ArcGIS.esriSystem.esriUnits)">
+            <summary>
+            获取面积单位中文名称
+            </summary>
+            <param name="UnitType">面积单位类型</param>
+            <returns>面积单位中文名称</returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.CommonUtil">
+            <summary>
+            通用方法类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.CommonUtil.ReleaseComObject(System.Object)">
+            <summary>
+            释放内存
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.CommonUtil.GetDescription(System.Enum)">
+            <summary>
+            获取枚举的描述字符串
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.CommonUtil.GetSpentTime(System.DateTime,System.DateTime)">
+            <summary>
+            Gets the elapsed time string.
+            </summary>
+            <param name="startTime">The start time.</param>
+            <param name="endTime">The end time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.CommonUtil.WriteSearchLog(System.String,ESRI.ArcGIS.Geodatabase.IQueryFilter)">
+            <summary>
+            记录空间查询参数到系统日志 
+            </summary>
+            <param name="datasetName">查询对象名称</param>
+            <param name="filter">过滤条件</param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.DisplayUtil">
+            <summary>
+            Display操作工具类
+            </summary>
+            <remarks>提供要素绘制等显示操作的静态方法类</remarks>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.AddCreateElement3(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Carto.IActiveView@,ESRI.ArcGIS.Display.ISymbol,System.String)">
+            <summary>
+            在地图视图上加上有key信息的指定图形元素 。
+            </summary>张政 6.21 修改增加
+            <param name="geom">几何图形</param>
+            <param name="av">视图对象</param>
+            <param name="sym">符号</param>
+            <param name="key">关键词</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.AddCreateElement2(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Carto.IActiveView@,ESRI.ArcGIS.Display.ISymbol)">
+            <summary>
+            在地图视图上加上指定图形元素(区别与原来得方法，该方法使用时不先删除所有element)。
+            </summary> //张政 6.20 修改增加
+            <param name="geom">图形</param>
+            <param name="av">地图视图</param>
+            <param name="sym">符号化符号</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.AddCreateElement(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Carto.IActiveView@,ESRI.ArcGIS.Display.ISymbol)">
+            <summary>
+            在地图视图上临时加上指定图形元素。
+            </summary>
+            <param name="geom">图形</param>
+            <param name="av">地图视图</param>
+            <param name="sym">符号化符号</param>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.DisplayUtil.MarkerSelectSymbol">
+            <summary>
+            默认的点符号样式
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.DisplayUtil.LineSelectSymbol">
+            <summary>
+            默认的线符号样式
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.DisplayUtil.AreaSelectSymbol">
+            <summary>
+            默认的面符号样式
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashFeature(ESRI.ArcGIS.Carto.IActiveView,ESRI.ArcGIS.Geodatabase.IFeature)">
+            <summary>
+            闪烁要素,调用FlashGeometry方法
+            </summary>
+            <param name="activeView"></param>
+            <param name="feature"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashPolygon(ESRI.ArcGIS.Display.IScreenDisplay,ESRI.ArcGIS.Geometry.IPolygon)">
+            <summary>
+            闪烁面状要素或图形
+            </summary>
+            <param name="display"></param>
+            <param name="polygon"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashPolygon(ESRI.ArcGIS.Controls.AxMapControl,ESRI.ArcGIS.Geometry.IPolygon)">
+            <summary>
+            闪烁面状要素或图形
+            </summary>
+            <param name="display">地图控件对象</param>
+            <param name="polygon">要闪烁的多边形</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashLine(ESRI.ArcGIS.Display.IScreenDisplay,ESRI.ArcGIS.Geometry.IPolyline)">
+            <summary>
+            闪烁线状要素或图形
+            </summary>
+            <param name="display">屏幕绘制对象</param>
+            <param name="line">要闪烁的线图形</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashLine(ESRI.ArcGIS.Controls.AxMapControl,ESRI.ArcGIS.Geometry.IPolyline)">
+            <summary>
+            闪烁线状要素或图形
+            </summary>
+            <param name="display">地图控件对象</param>
+            <param name="line">要闪烁的线图形</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashPoint(ESRI.ArcGIS.Display.IScreenDisplay,ESRI.ArcGIS.Geometry.IPoint)">
+            <summary>
+            闪烁点状要素或图形
+            </summary>
+            <param name="display">屏幕绘制对象</param>
+            <param name="point">点图形</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashPoint(ESRI.ArcGIS.Controls.AxMapControl,ESRI.ArcGIS.Geometry.IPoint)">
+            <summary>
+            闪烁点状要素或图形
+            </summary>
+            <param name="display">地图控件对象</param>
+            <param name="point">点图形</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashGeometry(ESRI.ArcGIS.Carto.IActiveView,ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            闪烁图形元素，根据类型自动判断调用相关方法
+            </summary>
+            <param name="activeView">视图对象</param>
+            <param name="geometry">要闪烁的几何图形</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.FlashGeometry(ESRI.ArcGIS.Controls.AxMapControl,ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            闪烁图形元素，根据类型自动判断调用相关方法
+            </summary>
+            <param name="mapControl">地图控件对象</param>
+            <param name="geometry">要闪烁的几何图形</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.SelectFeature(System.Int32,ESRI.ArcGIS.Carto.IFeatureLayer,ESRI.ArcGIS.Carto.IActiveView)">
+            <summary>
+            选择要素
+            </summary>
+            <param name="nObjectID">要素OID</param>
+            <param name="pLayer">要素图层</param>
+            <param name="pAV">视图对象</param>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.DisplayUtil.SelectFeature(System.Int32,ESRI.ArcGIS.Carto.IFeatureLayer,ESRI.ArcGIS.Carto.IMap)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.GetFeatureDisplayEnvelope(ESRI.ArcGIS.Carto.IActiveView,ESRI.ArcGIS.Geodatabase.IFeature)">
+            <summary>
+            得到要素合适的显示范围
+            </summary>
+            <param name="pActiview">地图视图对象</param>
+            <param name="pFeature">要素</param>
+            <returns>要素合适的显示范围</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.DisplayUtil.GetElementByKey(ESRI.ArcGIS.Carto.IActiveView,System.String)">
+            <summary>
+            得到有key信息的制定图形元素
+            </summary>
+            <param name="pActiveview"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.FeatureUtil">
+            <summary>
+            要素操作实用工具
+            </summary>
+            <remarks>有关要素操作的方法封装类 </remarks>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.CopyFeatAttribute(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Geodatabase.IFeatureBuffer,System.Collections.Generic.List{System.String})">
+            <summary>
+            将指定字段的源要素字段值拷贝到目标要素缓冲区中
+            </summary>
+            <param name="sourceFeat">源要素</param>
+            <param name="targetFeat">目标要素缓冲区</param>
+            <param name="commonFields">要拷贝的字段名称列表</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.CopyFeatAttribute(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Geodatabase.IFeature,System.Collections.Generic.List{System.String})">
+            <summary>
+            将指定字段的源要素字段值拷贝到目标要素字段中
+            </summary>
+            <param name="sourceFeat">源要素</param>
+            <param name="targetFeat">目标要素</param>
+            <param name="commonFields">要拷贝的字段名称列表</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.CopyAttribute(ESRI.ArcGIS.Geodatabase.IRow,ESRI.ArcGIS.Geodatabase.IRowBuffer)">
+            <summary>
+            拷贝源Row属性值到目标RowBuffer中
+            </summary>
+            <param name="source">源Row</param>
+            <param name="target">目标RowBuffer</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.CopyFieldValueByName(ESRI.ArcGIS.Geodatabase.IRow,ESRI.ArcGIS.Geodatabase.IRowBuffer,System.String)">
+            <summary>
+            将源Row的某个字段值拷贝到目标RowBuffer中
+            </summary>
+            <param name="srcFeature">源Row</param>
+            <param name="desFeature">目标RowBuffer</param>
+            <param name="name">要拷贝的字段名称</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.CopyFieldValueByName(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Geodatabase.IFeatureBuffer,System.String)">
+            <summary>
+            将源要素的某个字段值拷贝到目标要素缓冲区中
+            </summary>
+            <param name="srcFeature">源要素</param>
+            <param name="desFeature">目标要素缓冲区</param>
+            <param name="name">要拷贝的字段名称</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.CopyFieldValueByName(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Geodatabase.IFeature,System.String)">
+            <summary>
+             将源要素的某个字段值拷贝到目标要素中
+            </summary>
+            <param name="srcFeature">源要素</param>
+            <param name="desFeature">目标要素</param>
+            <param name="name">要拷贝的字段名称</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.SetFieldValueByName(ESRI.ArcGIS.Geodatabase.IFeature,System.String,System.String)">
+            <summary>
+            将某个字段值设置到要素字段中
+            </summary>
+            <param name="desFeature">目标要素</param>
+            <param name="srcName">字段名称</param>
+            <param name="fldvalue">字段值</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.SetFieldValueByName(ESRI.ArcGIS.Geodatabase.IFeature,System.String,System.Object)">
+            <summary>
+             将某个字段值设置到要素中
+            </summary>
+            <param name="desFeature">目标要素</param>
+            <param name="srcName">字段名称</param>
+            <param name="fldvalue">字段值</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.SetFieldValueByName(ESRI.ArcGIS.Geodatabase.IFeatureBuffer,System.String,System.String)">
+            <summary>
+            将某个字段值设置到要素缓冲区中
+            </summary>
+            <param name="desFeature">目标要素缓冲区</param>
+            <param name="srcName">字段名称</param>
+            <param name="fldvalue">字段值</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.SetFieldValueByName(ESRI.ArcGIS.Geodatabase.IFeatureBuffer,System.String,System.Object)">
+            <summary>
+            将某个字段值设置到要素缓冲区中
+            </summary>
+            <param name="desFeature">目标要素缓冲区</param>
+            <param name="srcName">字段名称</param>
+            <param name="fldvalue">字段值</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.SetFieldValueByName(ESRI.ArcGIS.Geodatabase.IRow,System.String,System.Object)">
+            <summary>
+            将某个字段值设置到Row中
+            </summary>
+            <param name="desRow">目标Row</param>
+            <param name="srcName">字段名称</param>
+            <param name="fldvalue">字段值</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.FindOneFeature(ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String)">
+            <summary>
+            查找一个要素
+            </summary>
+            <param name="fcls">要素类</param>
+            <param name="whereClause">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.FindOneFeature(ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.Boolean)">
+            <summary>
+            查找一个要素
+            </summary>
+            <param name="fcls">要素类</param>
+            <param name="whereClause">查询条件</param>
+            <param name="recycling">是否回收资源</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.GetDateTimeValue(ESRI.ArcGIS.Geodatabase.IFeature,System.Int32,System.DateTime@)">
+            <summary>
+            获取时间字段值
+            </summary>
+            <param name="fea">要素</param>
+            <param name="fldIndex">字段索引</param>
+            <param name="value">返回字段值</param>
+            <returns>字段值为空或者不是DateTime类型，返回false，否则返回true</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.GetInt32Value(ESRI.ArcGIS.Geodatabase.IFeature,System.Int32,System.Int32@)">
+            <summary>
+            获取Int32字段值
+            </summary>
+            <param name="fea">要素</param>
+            <param name="fldIndex">字段索引</param>
+            <param name="value">返回字段值</param>
+            <returns>字段值为空或者不是Int32类型，返回false，否则返回true</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FeatureUtil.GetInt32Value(ESRI.ArcGIS.Geodatabase.IFeature,System.Int32,System.String@)">
+            <summary>
+            获取string字段值
+            </summary>
+            <param name="fea">要素</param>
+            <param name="fldIndex">字段索引</param>
+            <param name="value">返回字段值</param>
+            <returns>字段值为空、空字符串或者不是string类型，返回false，否则返回true</returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.FieldUtil">
+            <summary>
+            字段操作实用工具
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.CreateField(System.String,System.String,ESRI.ArcGIS.Geodatabase.esriFieldType,System.Boolean)">
+            <summary>
+            创建普通字段
+            </summary>
+            <param name="Name"></param>
+            <param name="AliasName"></param>
+            <param name="type"></param>
+            <param name="IsNullable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.CreateTextField(System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            创建文本字段
+            只有文本字段才需要指定长度
+            </summary>
+            <param name="Name"></param>
+            <param name="AliasName"></param>
+            <param name="IsNullable"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.CreateTextField(System.String,System.String,System.Boolean,System.Int32,System.String)">
+            <summary>
+            创建文本字段
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.CreateShapeField(System.String,System.String,ESRI.ArcGIS.Geometry.esriGeometryType,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            创建Shape字段
+            </summary>
+            <param name="name"></param>
+            <param name="aliasName"></param>
+            <param name="iGeometryType"></param>
+            <param name="spatialRef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.GetCodeValDomainDic(ESRI.ArcGIS.Geodatabase.IField)">
+            <summary>
+            获取字段的域值字典
+            </summary>
+            <param name="pField">AE字段对象</param>
+            <returns>域值字典</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.GetCodeValDomainDic(System.String,ESRI.ArcGIS.Geodatabase.ITable)">
+            <summary>
+            获取字段的域值字典
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="pTable">表对象</param>
+            <returns>域值字典</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.GetDispLayValFromCodeDic(System.Object,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            获取字段值的显示值
+            </summary>
+            <param name="codeVal">实际编码值</param>
+            <param name="codeValDomainDic">域值字典</param>
+            <returns>显示值</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FieldUtil.getStrTypeByEsriType(ESRI.ArcGIS.Geodatabase.esriFieldType)">
+            <summary>
+            获取自定义字段类型
+            </summary>
+            <param name="esriFld">系统类型</param>
+            <returns>自定义类型</returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.GwGeoprocessor">
+            <summary>
+            地理处理工具执行工具类，封装了对Geoprocessor的执行方法，提供gp执行消息事件
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GwGeoprocessor.Execute(ESRI.ArcGIS.Geoprocessor.IGPProcess,System.Boolean)">
+            <summary>
+            执行
+            </summary>
+            <param name="Process">待执行的工具</param>
+            <param name="pOverwriteOutput">是否覆盖已有文件（当目标文件已存在时）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GwGeoprocessor.Execute(System.String,ESRI.ArcGIS.esriSystem.IVariantArray,System.Boolean)">
+            <summary>
+            执行
+            </summary>
+            <param name="ToolName">工具名称</param>
+            <param name="pParameterArray">参数列表</param>
+            <param name="pOverwriteOutput">是否覆盖已有文件（当目标文件已存在时）</param>
+            <returns></returns>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.GwGeoprocessor.GPMessage">
+            <summary>
+            每当一条GP 消息被公布的时候，客户能被通知的一个事件
+            </summary>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.GwGeoprocessor.GPToolboxChanged">
+            <summary>
+            当Toolbox被改变后的一个事件
+            </summary>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.GwGeoprocessor.GPPostToolExecute">
+            <summary>
+            当一个地理处理工具（Tool）完成之后的一个事件
+            </summary>
+        </member>
+        <member name="E:Geoway.ADF.GIS.Utility.GwGeoprocessor.GPPreToolExecute">
+            <summary>
+            当一个地理处理工具（Tool）完成之前的一个事件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.GPMessageEventArgs">
+            <summary>
+            ESRI GP执行消息事件参数
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.GPPostToolExecuteEventArgs">
+            <summary>
+            ESRI GP工具执行事件参数
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.GPPreToolExecuteEventArgs">
+            <summary>
+            ESRI GP工具执行事件参数
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.MessageEventHandler">
+            <summary>
+            ESRI GP工具执行消息代理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.ToolboxChangedEventHandler">
+            <summary>
+            ESRI GP工具切换事件代理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.PostToolExecuteEventHandler">
+            <summary>
+            ESRI GP工具执行代理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.PreToolExecuteEventHandler">
+            <summary>
+            ESRI GP工具执行代理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.GPMessageEventHandler">
+             <summary>
+            在一个GeoProcessor中一条消息被增加时对外提供一个事件的类.实现了IGeoProcessorEvents
+             </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GPMessageEventHandler.ESRI#ArcGIS#Geoprocessing#IGeoProcessorEvents#OnMessageAdded(ESRI.ArcGIS.Geodatabase.IGPMessage)">
+            <summary>
+            当在执行GeoProcessing时一条消息被提交后调用
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GPMessageEventHandler.ESRI#ArcGIS#Geoprocessing#IGeoProcessorEvents#PostToolExecute(ESRI.ArcGIS.Geoprocessing.IGPTool,ESRI.ArcGIS.esriSystem.IArray,System.Int32,ESRI.ArcGIS.Geodatabase.IGPMessages)">
+            <summary>
+            在GeoProcessor 执行一个工具之后调用
+            </summary>
+            <param name="Tool"></param>
+            <param name="Values"></param>
+            <param name="result"></param>
+            <param name="Messages"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GPMessageEventHandler.ESRI#ArcGIS#Geoprocessing#IGeoProcessorEvents#PreToolExecute(ESRI.ArcGIS.Geoprocessing.IGPTool,ESRI.ArcGIS.esriSystem.IArray,System.Int32)">
+            <summary>
+            在GeoProcessor执行一个工具的之前调用.
+            </summary>
+            <param name="Tool"></param>
+            <param name="Values"></param>
+            <param name="processID"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.GPMessageEventHandler.ESRI#ArcGIS#Geoprocessing#IGeoProcessorEvents#ToolboxChange">
+            <summary>
+            当一个ToolBox 从GeoProcessor中被添加或者被删除时调用 .
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.HookUtil">
+            <summary>
+            钩子方法集
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.HookUtil.GetMapAndView(System.Object,ESRI.ArcGIS.Carto.IMap@,ESRI.ArcGIS.Carto.IActiveView@)">
+            <summary>
+            从钩子中获取Map和视图对象
+            </summary>
+            <param name="hook">钩子钩子</param>
+            <param name="map">Map对象</param>
+            <param name="activeview">视图对象</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.HookUtil.GetHookHelper(System.Object,ESRI.ArcGIS.Controls.IHookHelper@)">
+            <summary>
+            从钩子中钩子帮助对象
+            </summary>
+            <param name="hook">钩子</param>
+            <param name="hookhelper">帮助对象</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.HookUtil.GetMap(System.Object,ESRI.ArcGIS.Carto.IMap@)">
+            <summary>
+            从钩子中获得IMap对象
+            </summary>
+            <param name="hook">钩子对象</param>
+            <param name="map">IMap对象</param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.IMapElementControl">
+            <summary>
+            图面元素操作接口
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.AddElementToMap(ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            添加Element到当前的视图
+            </summary>
+            <param name="pGeo">Element的形状</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.AddElementToMap(ESRI.ArcGIS.Geometry.IGeometry,System.String)">
+            <summary>
+            添加Element到当前的视图
+            </summary>
+            <param name="pGeo">Element的形状</param>
+            <param name="SymName">Element中显示的文字</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.ClearAllElements">
+            <summary>
+            清除当前视图内所有的Element
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.SetActiveView(ESRI.ArcGIS.Carto.IActiveView@)">
+            <summary>
+            设置当前的视图，用来显示Element，必须设置
+            </summary>
+            <param name="av">视图</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.SetSymbol(ESRI.ArcGIS.Display.IMarkerFillSymbol)">
+            <summary>
+            设置点样式，可选项
+            </summary>
+            <param name="PointSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.SetSymbol(ESRI.ArcGIS.Display.IMarkerFillSymbol,ESRI.ArcGIS.Display.ISimpleLineSymbol,ESRI.ArcGIS.Display.ISimpleFillSymbol,ESRI.ArcGIS.Display.ITextSymbol)">
+            <summary>
+            设置Element样式，可选项
+            </summary>
+            <param name="PointSymbol">点状Elementt样式</param>
+            <param name="LineSymbol">线状Elementt样式</param>
+            <param name="AreaSelectSymbol">面状Elementt样式</param>
+            <param name="TextSymbol">文字Element</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.SetSymbol(ESRI.ArcGIS.Display.ITextSymbol)">
+            <summary>
+            设置文字Elementt样式，可选项
+            </summary>
+            <param name="TextSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.SetSymbol(ESRI.ArcGIS.Display.ISimpleLineSymbol)">
+            <summary>
+            设置线状Elementt样式，可选项
+            </summary>
+            <param name="LineSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.SetSymbol(ESRI.ArcGIS.Display.ISimpleFillSymbol)">
+            <summary>
+            设置面状Elementt样式，可选项
+            </summary>
+            <param name="AreaSelectSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.IMapElementControl.RefreshView">
+            <summary>
+            刷新视图
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.MapElementControlClass">
+            <summary>
+            图面元素操作类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.SetActiveView(ESRI.ArcGIS.Carto.IActiveView@)">
+            <summary>
+            设置当前的视图，用来显示Element，必须设置
+            </summary>
+            <param name="av">视图</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.ClearAllElements">
+            <summary>
+            清除当前视图内所有的Element
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.SetSymbol(ESRI.ArcGIS.Display.IMarkerFillSymbol,ESRI.ArcGIS.Display.ISimpleLineSymbol,ESRI.ArcGIS.Display.ISimpleFillSymbol,ESRI.ArcGIS.Display.ITextSymbol)">
+            <summary>
+            设置Element样式，可选项
+            </summary>
+            <param name="PointSymbol">点状Elementt样式</param>
+            <param name="LineSymbol">线状Elementt样式</param>
+            <param name="AreaSelectSymbol">面状Elementt样式</param>
+            <param name="TextSymbol">文字Element</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.SetSymbol(ESRI.ArcGIS.Display.IMarkerFillSymbol)">
+            <summary>
+            设置点样式，可选项
+            </summary>
+            <param name="PointSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.SetSymbol(ESRI.ArcGIS.Display.ISimpleLineSymbol)">
+            <summary>
+            设置线状Elementt样式，可选项
+            </summary>
+            <param name="LineSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.SetSymbol(ESRI.ArcGIS.Display.ISimpleFillSymbol)">
+            <summary>
+            设置面状Elementt样式，可选项
+            </summary>
+            <param name="AreaSelectSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.SetSymbol(ESRI.ArcGIS.Display.ITextSymbol)">
+            <summary>
+            设置文字Elementt样式，可选项
+            </summary>
+            <param name="TextSymbol"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.AddElementToMap(ESRI.ArcGIS.Geometry.IGeometry)">
+            <summary>
+            添加Element到当前的视图
+            </summary>
+            <param name="pGeo">Element的形状</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.AddElementToMap(ESRI.ArcGIS.Geometry.IGeometry,System.String)">
+            <summary>
+            添加Element到当前的视图
+            </summary>
+            <param name="pGeo">Element的形状</param>
+            <param name="key">Element中显示的文字</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.MapElementControlClass.RefreshView">
+            <summary>
+            刷新视图
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.AOPersistUtil">
+            <summary>
+            AO对象持久化
+            </summary>
+            <remarks>此类提供序列化AO对象的操作方法</remarks>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.AOPersistUtil.SaveArcObjectToFile(ESRI.ArcGIS.esriSystem.IPersistStream,System.String)">
+            <summary>
+            AO对象存储到二进制
+            </summary>
+            <param name="pPersistStream">输出流对象</param>
+            <param name="fileName">文件名称</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.AOPersistUtil.ReadArcObjectFromFile(System.String,ESRI.ArcGIS.esriSystem.IPersistStream@)">
+            <summary>
+            从文件中读取AO对象
+            </summary>
+            <param name="fileName">文件名称</param>
+            <param name="pPersistStream">输出流对象</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.AOPersistUtil.ReadArcObjectToBytes(System.Object)">
+            <summary>
+            ArcGIS对象序列化成二进制
+            </summary>
+            <param name="pObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.AOPersistUtil.ReadArcObjectFromBytes(System.Byte[],System.Object)">
+            <summary>
+            二进制反序列化成ArcGIS对象
+            </summary>
+            <param name="bytes"></param>
+            <param name="pObject"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.RasterDataOperator">
+            <summary>
+            栅格数据操作工具类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.OpenRasterDataset(System.String,System.String)">
+            <summary>
+            打开文件型栅格,返回IRasterDataset
+            </summary>
+            <param name="path">栅格文件路径</param>
+            <param name="name">栅格数据集名称</param>
+            <returns>栅格数据集</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.OpenRasterDataset(System.String)">
+            <summary>
+            打开文件型栅格,返回IRasterDataset
+            </summary>
+            <param name="filepath">全路径文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.OpenRasterDataset(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            获得SDE中的RasterDataset,也可以用来判断SDE中是否存在该数据集
+            </summary>
+            <param name="workSapce"></param>
+            <param name="rasterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.OpenRasterCatalog(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            打开栅格目录
+            </summary>
+            <param name="workspace">工作空间</param>
+            <param name="sCatalogName">栅格目录名称</param>
+            <returns>栅格目录</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.OpenMosaicDataset(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            打开镶嵌数据集
+            </summary>
+            <param name="workspace">工作空间</param>
+            <param name="sCatalogName">镶嵌数据集名称</param>
+            <returns>镶嵌数据集</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.GetRasterDataset(ESRI.ArcGIS.Geodatabase.IRaster)">
+            <summary>
+            从Raster获得RasterDataset
+            </summary>
+            <param name="raster"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.GetRasterColormap(ESRI.ArcGIS.Geodatabase.IRasterDataset)">
+            <summary>
+             从RasterDataset获得颜色表
+            </summary>
+            <param name="rasterDataset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.BuildPyramid(ESRI.ArcGIS.Geodatabase.IRasterDataset)">
+            <summary>
+            创建影像金子塔
+            </summary>
+            <param name="rasterDataset">栅格数据</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.BuildPyramid(ESRI.ArcGIS.Geodatabase.IRasterDataset,System.Int32,ESRI.ArcGIS.Geodatabase.rstResamplingTypes)">
+            <summary>
+            创建影像金子塔
+            </summary>
+            <param name="rasterDataset">栅格数据集</param>
+            <param name="PyramidLevel">金字塔等级</param>
+            <param name="ResamplingType">重采样类型</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.ComputeStatsAndHist(ESRI.ArcGIS.Geodatabase.IRasterDataset)">
+            <summary>
+            计算统计信息
+            </summary>
+            <param name="rasterDataset">栅格数据</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.ComputeStatsAndHist(ESRI.ArcGIS.Geodatabase.IRasterCatalog,System.String)">
+            <summary>
+            计算统计信息
+            </summary>
+            <param name="pRasterCatalog">栅格目录</param>
+            <param name="rasterName">栅格名称</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.ResetPrj(ESRI.ArcGIS.Geodatabase.IRasterCatalog,System.String,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            重新设置栅格目录的空间参考
+            </summary>
+            <param name="rasterCatalog">栅格目录</param>
+            <param name="rasterName">栅格名称</param>
+            <param name="srcRef">空间参考</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.AnalyzeDataset(ESRI.ArcGIS.Geodatabase.IRasterDataset,ESRI.ArcGIS.Geodatabase.esriTableComponents)">
+            <summary>
+            分析SDE索引和统计，仅支持ArcSDE中的数据集,不支持文件型或个人GeoDatabase
+            </summary>
+            <param name="sdeRasterDataset">栅格数据</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.CreateRasterDataset(ESRI.ArcGIS.Geodatabase.IRasterDataset@,System.String,ESRI.ArcGIS.Geodatabase.IWorkspace@,ESRI.ArcGIS.Geodatabase.IRasterStorageDef,ESRI.ArcGIS.Geometry.ISpatialReference,ESRI.ArcGIS.Geodatabase.rstPixelType)">
+            <summary>
+            根据给定的IRasterDataset创建新RasterDataset，可指定像素类型，用于ASCII和DEM入库
+            </summary>
+            <param name="pRasterDataset">栅格数据集</param>
+            <param name="name">栅格数据集名称</param>
+            <param name="pWorkspace">工作空间</param>
+            <param name="pRasterStorageDef">存储参数</param>
+            <param name="pSpatialReference">空间参考</param>
+            <param name="pPixelType">像素类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.CreateRasterDataset(ESRI.ArcGIS.Geodatabase.IRasterDataset@,System.String,ESRI.ArcGIS.Geodatabase.IWorkspace@,ESRI.ArcGIS.Geodatabase.IRasterStorageDef,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            根据给定的IRasterDataset创建新RasterDataset
+            </summary>
+            <param name="pRasterDataset">The raster dataset.</param>
+            <param name="name">The name.</param>
+            <param name="pWorkspace">The workspace.</param>
+            <param name="pSpatialReference">The spatial reference.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.Resample(System.String,System.String,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum)">
+            <summary>
+            栅格数据重采样
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="name">文件名</param>
+            <param name="newCellsize">目标采样间隔(分辨率)</param>
+            <param name="pResampleType">重采样方法</param>
+            <returns>处理后的栅格数据集</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.Resample(ESRI.ArcGIS.Geodatabase.IRasterDataset,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum)">
+            <summary>
+            栅格数据重采样
+            </summary>
+            <param name="pOriRsDs">原始栅格数据集</param>
+            <param name="newCellsize">目标采样间隔(分辨率)</param>
+            <param name="pResampleType">重采样方法</param>
+            <returns>处理后的栅格数据集</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.CreateRasterCatalog(ESRI.ArcGIS.Geodatabase.IRasterCatalog,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="srcRasterCatalog"></param>
+            <param name="tarWorkspace"></param>
+            <param name="tarDatasetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.CreateRasterCatalog(System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,ESRI.ArcGIS.Geometry.ISpatialReference,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            创建栅格编目入口函数
+            </summary>
+            <param name="sCatalogName"></param>
+            <param name="pWorkspace"></param>
+            <param name="ShpSpatialReference"></param>
+            <param name="RasterSpatialReference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.CreateRasterCatalog(ESRI.ArcGIS.Geodatabase.IRasterWorkspaceEx,System.String,System.String,System.String,System.String,ESRI.ArcGIS.Geometry.ISpatialReference,ESRI.ArcGIS.Geometry.ISpatialReference,System.Boolean,ESRI.ArcGIS.Geodatabase.IFields,System.String)">
+            <summary>
+            创建栅格编目（支持 PGDB, FGDB, and ArcSDE）
+            </summary>
+            <param name="pWs">工作空间对象</param>
+            <param name="sCatalogName">栅格编目的名称</param>
+            <param name="sName">栅格编目属性表的名称字段名</param>
+            <param name="sRasterFldName">栅格编目属性表的栅格数据字段名</param>
+            <param name="sShapeFldName">栅格编目属性表的几何图形字段字段名</param>
+            <param name="pShpSpatialRef">栅格编目几何图形的空间参考</param>
+            <param name="pRasterSpatialRef">栅格编目栅格数据的默认空间参考</param>
+            <param name="isManaged">是否为托管模式,仅在PGDB中有效</param>
+            <param name="pFields">属性表字段集合，给Null的话将创建默认的属性表字段</param>
+            <param name="sKeyword">栅格编目的关键词</param>
+            <returns>返回创建成功的栅格编目对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.CreateShapeField(System.String,System.String,ESRI.ArcGIS.Geodatabase.esriFieldType,ESRI.ArcGIS.Geometry.esriGeometryType,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            创建几何字段
+            </summary>
+            <param name="CName"></param>
+            <param name="EName"></param>
+            <param name="fType"></param>
+            <param name="geoMetrytype"></param>
+            <param name="SpatialRef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.CreateRasterField(System.String,System.String,ESRI.ArcGIS.Geodatabase.esriFieldType,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            创建栅格字段
+            </summary>
+            <param name="CName"></param>
+            <param name="EName"></param>
+            <param name="fType"></param>
+            <param name="pSpatialRef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.GetDefaultRasterStorageDef">
+             <summary>
+            获取默认栅格存储参数信息
+             </summary>
+             <returns>格存储参数信息</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.GetCustomRasterStorageDef(ESRI.ArcGIS.Geodatabase.esriRasterCompressionType,System.Int32,ESRI.ArcGIS.Geodatabase.rstResamplingTypes,System.Int32,System.Int32)">
+            <summary>
+            获得一个自定义的栅格存储参数
+            </summary>
+            <param name="CompressionType">压缩方法.</param>
+            <param name="PyramidLevel">0-不创建；-1，自动创建；给定值：按给定级数创建.</param>
+            <param name="PyramidResampleType">Type of the pyramid resample.</param>
+            <param name="TileHeight">Height of the tile.</param>
+            <param name="TileWidth">Width of the tile.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.GetCustomRasterStorageDef(ESRI.ArcGIS.Geodatabase.esriRasterCompressionType,System.Int32,System.Int32,ESRI.ArcGIS.Geodatabase.rstResamplingTypes,System.Int32,System.Int32)">
+            <summary>
+            获得一个自定义的栅格存储参数
+            </summary>
+            <param name="CompressionType">压缩方法.</param>
+            <param name="CompressionQuality">压缩质量。只在JPEG时有效.</param>
+            <param name="PyramidLevel">0-不创建；-1，自动创建；给定值：按给定级数创建</param>
+            <param name="PyramidResampleType">Type of the pyramid resample.</param>
+            <param name="TileHeight">Height of the tile.</param>
+            <param name="TileWidth">Width of the tile.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.UpdataFootprint(ESRI.ArcGIS.Geodatabase.IRasterCatalog)">
+            <summary>
+            更新足迹 footprint (bounding box) 
+            </summary>
+            <param name="pRasterCatalog">待更新的栅格编目</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.RasterDataOperator.UpdataFootprintEx(ESRI.ArcGIS.Geodatabase.IRasterCatalog,System.String,System.Boolean)">
+            <summary>
+            更新足迹(支持部分更新,加入控制条件) footprint (bounding box) 
+            </summary>
+            <param name="pRasterCatalog">待更新的栅格编目</param>
+            <param name="where">查询过滤语句，为空的话将更新全部</param>
+            <param name="onlyIfEmpty"></param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.SpatialReferenceUtil">
+            <summary>
+            空间参考工具类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.SaveSpatialReference(ESRI.ArcGIS.Geometry.ISpatialReference,System.String)">
+            <summary>
+            保存空间参考为文件
+            </summary>
+            <param name="pRef">空间参考</param>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateSpatialReferenceByPrjFile(System.String)">
+            <summary>
+            根据坐标文件创建空间参考
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetMapMainProjectSystem">
+            <summary>
+            获得主空间参考，默认为主程序目录下的\CoordinateSystem\MapMain.prj
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetMapMeasureProjectSystem">
+            <summary>
+            获得主地图测量空间参考，默认为主程序目录下的\CoordinateSystem\MapMain.prj
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetAvailableSpatialReferences">
+            <summary>
+            获得系统可用的空间参考文件集合，默认路径为：主程序目录下的CoordinateSystem文件夹
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateGCSSpatialReference(Geoway.ADF.GIS.Utility.enumDatum)">
+            <summary>
+            获取地理坐标系
+            </summary>
+            <param name="iDatum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreatePRJSpatialReference(Geoway.ADF.GIS.Utility.enumDatum,Geoway.ADF.GIS.Utility.enumPrjType,Geoway.ADF.GIS.Utility.enumZoneType,System.Int32)">
+            <summary>
+            获取投影坐标系
+            </summary>
+            <param name="iDatum"></param>
+            <param name="iPrjType"></param>
+            <param name="iZoneType"></param>
+            <param name="zoneNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateGeographicCoordinateSystem(System.Int32)">
+            <summary>
+            创建地理坐标系
+            </summary>
+            <param name="nGcsType">esriSRGeoCSType, esriSRGeoCS2Type, or esriSRGeoCS3Type</param>
+            <returns>IGeographicCoordinateSystem, 不成功为 NULL </returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateProjectedCoordinateSystem(System.Int32)">
+            <summary>
+            创建投影坐标系
+            </summary>
+            <param name="nPcsType">esriSRProjCSType, esriSRProjCS2Type, esriSRProjCS3Type, or esriSRProjCS4Type</param>
+            <returns>IProjectedCoordinateSystem, 不成功为 NULL</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateDatum(System.Int32)">
+            <summary>
+            创建基准
+            </summary>
+            <param name="nDatumType">esriSRDatumType, esriSRDatum2Type, or esriSRDatum3Type</param>
+            <returns>IDatum, 失败返回NULL</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreatePrimeMeridian(System.Int32)">
+            <summary>
+            创建中央子午线
+            </summary>
+            <param name="nPrimeMeridianType">esriSRPrimeMType or esriSRPrimeM2Type</param>
+            <returns>IPrimeMeridian, 失败返回NULL</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateSpheroid(System.Int32)">
+            <summary>
+            创建椭球
+            </summary>
+            <param name="nSpheroidType">esriSRSpheroidType or esriSRSpheroid2Type</param>
+            <returns>ISpheroid, 失败为NULL</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateUnit(System.Int32)">
+            <summary>
+            创建尺度,线或角度
+            </summary>
+            <param name="nUnitType">esriSRUnitType or esriSRUnit2Type</param>
+            <returns>IUnit, 失败为 NULL </returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateProjection(System.Int32)">
+            <summary>
+            创建投影
+            </summary>
+            <param name="nPrjType">esriSRProjectionType, esriSRProjection2Type, esriSRProjection3Type, or esriSRProjection4Type</param>
+            <returns>IProjection,失败为NULL</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateParameter(System.Int32)">
+            <summary>
+            创建空间参考参数
+            </summary>
+            <param name="nParameterType">esriSRParameterType、esriSRParameter2Type、esriSRParameter3Type、esriSRParameter4Type</param>
+            <returns>IParameter,不成功为 NULL </returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetSpatialReferenceWkt(ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            获取空间参考的Wkt字符串
+            </summary>
+            <param name="pSpatialRef"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetSpatialReferenceWkt(System.String)">
+            <summary>
+            获取Prj文件中空间参考的Wkt字符串
+            </summary>
+            <param name="sPrjFile"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.CreateSpatialReferenceFromWkt(System.String,System.Double,System.Double,System.Double,System.Double)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.IsEqual(ESRI.ArcGIS.Geometry.ISpatialReference,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            比较空间参考是否是相等
+            </summary>
+            <param name="spatialReference1">空间参考1</param>
+            <param name="spatialReference2">空间参考2</param>
+            <returns>相等,返回true</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetAllFileInfo(System.String,System.Collections.Generic.List{System.IO.FileInfo}@)">
+            <summary>
+            获得文件夹下的所有文件
+            </summary>
+            <param name="sPath"></param>
+            <param name="fileInfo"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetPrjChangeGeometry(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+            <summary>
+            重新投影空间查询的要素
+            </summary>
+            <param name="geometry"></param>
+            <param name="featureClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.GetPrjChangeGeometry(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            重新投影空间查询的要素
+            </summary>
+            <param name="geometry"></param>
+            <param name="featureClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.SpatialReferenceUtil.Format2String(ESRI.ArcGIS.Geometry.ISpatialReference)">
+            <summary>
+            将空间参考各参数格式化成字符串
+            </summary>
+            <param name="spf">空间参考</param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.VectorDataOperator">
+            <summary>
+            矢量数据操作工具类
+            </summary>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.OpenFeatureDataset(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureDataset(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geometry.ISpatialReference)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.OpenFeatureClass(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.OpenTable(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.OpenFeatureClass(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String)">
+            <summary>
+            打开查询要素类
+            </summary>
+            <param name="workspace"></param>
+            <param name="fcName"></param>
+            <param name="whereClause"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFields,System.String)">
+            <summary>
+            根据已有要素类和传入的字段集合（可能有修改字段的要求），创建新的要素类，存放在相同的工作空间
+            </summary>
+            <param name="srcFeatClass"></param>
+            <param name="pFields"></param>
+            <param name="tarFCName"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String)">
+            <summary>
+            根据给定的要素类在工作空间中创建相同结构的要素类
+            </summary>
+            <param name="fcSource">参照要素类</param>
+            <param name="targetWorkspace">目标工作空间（geodatabase）</param>
+            <param name="targetFcName">目标要素类名称</param>
+            <param name="strConfigKeyWord">配置字段</param>
+            <returns>创建成功的简单要素类，失败返回null</returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geometry.ISpatialReference)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geometry.ISpatialReference,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFeatureDataset,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="srcFeatClass"></param>
+            <param name="tarFeatureDataset"></param>
+            <param name="tarFCName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFeatureDataset,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="srcFeatClass"></param>
+            <param name="tarFeatureDataset"></param>
+            <param name="tarFCName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFields,ESRI.ArcGIS.Geodatabase.IFeatureDataset,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="srcFeatClass"></param>
+            <param name="pFields"></param>
+            <param name="tarFeatureDataset"></param>
+            <param name="tarFCName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFields,ESRI.ArcGIS.Geodatabase.IFeatureDataset,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="srcFeatClass"></param>
+            <param name="pFields"></param>
+            <param name="tarFeatureDataset"></param>
+            <param name="tarFCName"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateAnnotationFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFields,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetAllVersions">
+            <summary>
+            获取所有版本Version
+            </summary>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.Lock(ESRI.ArcGIS.Geodatabase.IFeatureClass)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.UnLock(ESRI.ArcGIS.Geodatabase.IFeatureClass)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.IsLocked(ESRI.ArcGIS.Geodatabase.IFeatureClass)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.VerifyField(ESRI.ArcGIS.Geodatabase.IFields)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.SetSpatialRef(ESRI.ArcGIS.Geodatabase.IFields,ESRI.ArcGIS.Geometry.ISpatialReference)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetFCsName(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+            <summary>
+            
+            </summary>
+            <param name="workspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetFCs(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+            <summary>
+            获取工作空间下所有的要素类
+            </summary>
+            <param name="pWorkspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetFCsIName(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+            <summary>
+            获得工作空间的所有要素类 
+            IDatasetName形式
+            </summary>
+            <param name="workspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetDatasetsName(ESRI.ArcGIS.Geodatabase.IWorkspace,ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+            <summary>
+            获取要素数据集 栅格要素集 栅格目录 属性表 独立存在的要素类
+            </summary>
+            <param name="workspace"></param>
+            <param name="iDatasetType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetDatasets(ESRI.ArcGIS.Geodatabase.IWorkspace,ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+            <summary>
+            获取要素数据集 栅格要素集 栅格目录 属性表 独立存在的要素类
+            </summary>
+            <param name="workspace"></param>
+            <param name="iDatasetType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetFCsName(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            获取指定要素数据集下面的所有要素类名称
+            </summary>
+            <param name="workspace"></param>
+            <param name="sDatasetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetFCsName(ESRI.ArcGIS.Geodatabase.IFeatureDataset)">
+            <summary>
+            获取指定要素数据集下面的所有要素类
+            </summary>
+            <param name="pDataset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetFCs(ESRI.ArcGIS.Geodatabase.IFeatureDataset)">
+            <summary>
+            获得要素数据集下的所有要素类
+            </summary>
+            <param name="pDataset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetDatasetsIName(ESRI.ArcGIS.Geodatabase.IWorkspace,ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+            <summary>
+            获取要素数据集 栅格要素集 栅格目录 属性表 独立存在的要素类
+            </summary>
+            <param name="workspace"></param>
+            <param name="iDatasetType"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.VectorDataOperator.CreateFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String,System.Boolean,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.SetDefaultGeometryDef(ESRI.ArcGIS.Geodatabase.IFields)">
+            <summary>
+            创建图层时设置默认的几何字段属性，主要是设置自动维护空间索引属性，以便能够正常入库。
+            </summary>
+            <param name="flds">字段几何（需包含几何字段esriFieldTypeGeometry）</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetUniqueValue2(ESRI.ArcGIS.Carto.IFeatureLayer,System.String,System.Int32)">
+            <summary>
+             获取图层中指定字段的唯一值
+            </summary>
+            <param name="layer">要素类图层</param>
+            <param name="fieldName">字段名称</param>
+            <param name="SampleRate">最大记录数</param>
+            <returns>唯一值对象列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetUniqueValue3(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.Int32)">
+            <summary>
+            获取图层中指定字段的唯一值
+            </summary>
+            <param name="pTable">属性表</param>
+            <param name="fieldName">字段名称</param>
+            <param name="SampleRate">最大记录数</param>
+            <returns>唯一值对象列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetUniqueValue(ESRI.ArcGIS.Carto.IFeatureLayer,System.String,System.Int32)">
+            <summary>
+            获取图层中指定字段的唯一值
+            </summary>
+            <param name="layer">要素类图层</param>
+            <param name="fieldName">字段名称</param>
+            <param name="SampleRate">最大记录数</param>
+            <returns>唯一值对象列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.VectorDataOperator.GetUniqueValue(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.Int32)">
+            <summary>
+            获取图层中指定字段的唯一值
+            </summary>
+            <param name="table">属性表</param>
+            <param name="fieldName">字段名称</param>
+            <param name="SampleRate">最大记录数</param>
+            <returns>唯一值对象列表</returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.WorkspaceUtil">
+            <summary>
+            Workspace操作工具类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenFGDB(System.String)">
+            <summary>
+            路径形式：E:\temp\MapNO.gdb
+            </summary>
+            <param name="sFolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenCoverageWorkspace(System.String)">
+            <summary>
+            打开Arcinfo工作空间
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenCADWorkspace(System.String)">
+            <summary>
+            打开CAD工作空间
+            </summary>
+            <param name="workspacePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenTinWorkspace(System.String)">
+            <summary>
+            打开Tin工作空间
+            </summary>
+            <param name="workspacePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenSDEWorkspace(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            打开SDE连接，返回IWorkspace
+            </summary>
+            <param name="Server"></param>
+            <param name="Instance"></param>
+            <param name="User"></param>
+            <param name="Psw"></param>
+            <param name="Database"></param>
+            <param name="Version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenSDEWorkspace(System.String)">
+            <summary>
+            从SDE文件打开SDE数据库
+            </summary>
+            <param name="SDEFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenSDEWorkspace(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            需要维护GUID，可以支持通过GUID的方式重连Workspace
+            </summary>
+            <param name="guid"></param>
+            <param name="Server"></param>
+            <param name="Instance"></param>
+            <param name="User"></param>
+            <param name="Psw"></param>
+            <param name="Database"></param>
+            <param name="Version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenSDEWorkspace(System.String,System.String)">
+            <summary>
+            需要维护GUID，可以支持通过GUID的方式重连Workspace
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.FindWorkspaceInSource(System.String)">
+            <summary>
+            从缓存Workspace字典中查询
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.IsWorkspaceDown(ESRI.ArcGIS.Geodatabase.IWorkspace,System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            workspace是否连接失败
+            </summary>
+            <param name="workspaceToCheck"></param>
+            <param name="sleepTime"></param>
+            <param name="maxChecks"></param>
+            <param name="disconnected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.CheckWorkspaceStatus(ESRI.ArcGIS.Geodatabase.IWorkspace,System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            判断并重连数据库
+            </summary>
+            <param name="workspaceToCheck"></param>
+            <param name="sleepTime"></param>
+            <param name="maxChecks"></param>
+            <param name="disconnected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.CreatePGDB(System.String)">
+            <summary>
+            创建PGDB，但是不打开
+            </summary>
+            <param name="sFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.Create_Workspace_Access(System.String,System.String)">
+            <summary>
+            创建个人数据库
+            </summary>
+            <param name="pPath">存放路径</param>
+            <param name="pName">Dset名称</param>
+            <returns>工作空间对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.CreateMemeoryWorkspace(System.String)">
+            <summary>
+            创建内存工作空间
+            </summary>
+            <param name="sName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.OpenFileRasterWorkspace(System.String)">
+            <summary>
+            打开文件型栅格工作空间
+            </summary>
+            <param name="workspacePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetRasterWorkspace(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+            <summary>
+            获得栅格工作空间
+            </summary>
+            <param name="pWorkspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetRasterWorkspaceEx(ESRI.ArcGIS.DataSourcesRaster.IRasterWorkspace)">
+            <summary>
+            获得栅格工作空间
+            </summary>
+            <param name="pWorkspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.CreateAcessScratchWorkspace">
+            <summary>
+            创建Ascess临时工作空间（PGDB）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetCurrentAcessScratchWorkspace">
+            <summary>
+            得到当前Ascess临时工作空间（PGDB）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.CreateFileGDBScratchWorkspace">
+            <summary>
+            创建文件型临时工作空间（FileGDB）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetCurrentFileGDBScratchWorkspace">
+            <summary>
+            得到当前文件型临时工作空间（FileGDB）
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.WorkspaceUtil.CheckDatasetExist(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,ESRI.ArcGIS.Geodatabase.esriDatasetType)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetLengthString(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+            <summary>
+            获得字符串长度的SQL关键字
+            </summary>
+            <param name="workspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetMatchChar(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+            <summary>
+            获得模糊查询通配符的SQL关键字
+            </summary>
+            <param name="workspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetTimeString(ESRI.ArcGIS.Geodatabase.IWorkspace,System.DateTime)">
+            <summary>
+            获得时间字符串
+            </summary>
+            <param name="workspace"></param>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetTimeString(ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+            <summary>
+            获得时间字符串
+            </summary>
+            <param name="workspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.GetWorkspaceUser(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+            <summary>
+            获取SDE工作空间的用户  SDE直连将失效
+            </summary>
+            <param name="workspace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.IsEqual(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+            <summary>
+            判断两个IFeatureClass是否相等
+            </summary>
+            <param name="featureClass1">IFeatureClass1</param>
+            <param name="featureClass2">IFeatureClass2</param>
+            <returns>相等，返回true，反之false</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.WorkSpaceContainsObj(ESRI.ArcGIS.Geodatabase.IWorkspace,Geoway.ADF.GIS.Utility.enumESRIDatasetType,System.String)">
+            <summary>
+            当前工作空间是否已经存在该对象
+            </summary>
+            <param name="pNewTpye">对象类型</param>
+            <param name="pObjName">对象名称</param>
+            <returns>反馈信息</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.WorkspaceUtil.RegetFileName(ESRI.ArcGIS.Geodatabase.IWorkspace,Geoway.ADF.GIS.Utility.enumESRIDatasetType,System.String@)">
+            <summary>
+            根据文件所在文件夹路径以及文件(夹)名称，重新获取与之不相同的新文件(夹)名．
+            如果没有重名，仍返回旧名．
+            </summary>
+            <param name="pType">文件类型</param>
+            <param name="pOldName">旧文件(夹)名</param>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.enumScriptType">
+            <summary>
+             脚本语言类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumScriptType.enumScriptTypeJava">
+            <summary>
+            Java脚本
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.enumScriptType.enumScriptTypeVB">
+            <summary>
+            VB脚本
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.Private.FormSQLFilter">
+            <summary>
+            创建目的:构造SQLFilter
+            </summary>
+            <remarks>
+            创建者:zch
+            创建时间:2006-8-1
+            备注:
+            最后修改时间:
+            </remarks>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.FormSQLFilter.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.FormSQLFilter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.FormExpSet">
+            <summary>
+            脚本表达式窗体
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FormExpSet.Init(DevExpress.XtraEditors.ComboBoxEdit,System.String,Geoway.ADF.GIS.Utility.enumScriptType,System.Boolean,System.Collections.Generic.List{Geoway.ADF.MIS.Utility.Core.ItemInfo})">
+            <summary>
+            初始化
+            </summary>
+            <param name="cmbField"></param>
+            <param name="expression"></param>
+            <param name="exenumScriptType"></param>
+            <param name="isSimpleExpression"></param>
+            <param name="fieldsInfoItem">fieldItem中ItemInfo的ObjectValue为IField，RenderValue为别名</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FormExpSet.GetFieldAliasName(System.Collections.Generic.List{Geoway.ADF.MIS.Utility.Core.ItemInfo},System.String)">
+            <summary>
+            获取字段别名
+            </summary>
+            <param name="itemInfos"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.FormExpSet.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FormExpSet.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.FormExpSet.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.ExpressionEventArgs">
+            <summary>
+            脚本表达式消息
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.SQLFilterDialog">
+            <summary>
+            属性过滤对话框
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.Private.SpatialReference.Beijing1954">
+            <summary>
+            Beijing1954空间参考工具类
+            </summary>
+        </member>
+        <!-- 对于成员“T:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase”忽略有格式错误的 XML 注释 -->
+        <member name="T:Geoway.ADF.GIS.Utility.Private.SpatialReference.ICoordinateSystem">
+             <summary>
+            目的：空间参考工具类接口
+            创建人：李晶云
+            创建日期：2009-5-15
+            备注： 
+            修改描述：
+            修改人：
+            修改日期：
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.ICoordinateSystem.CreateProjectedCoordinateSystem(Geoway.ADF.GIS.Utility.enumZoneType,Geoway.ADF.GIS.Utility.enumPrjType,System.Int32)">
+            <summary>
+            创建指定代号的投影坐标系空间参考
+            </summary>
+            <param name="zoneType">分带类型.</param>
+            <param name="projectionType">投影类型</param>
+            <param name="zoneNumber">带号.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.ICoordinateSystem.CreateGeographicCoordinateSystem">
+            <summary>
+            创建地理坐标系空间参考
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.ICoordinateSystem.SetDefaultXYTolerance(ESRI.ArcGIS.Geometry.ISpatialReference@)">
+            <summary>
+            设置空间参考的默认Tolerance
+            </summary>
+            <param name="spatialReference">待设置的空间参考.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.ICoordinateSystem.SetSpatialReferencePrecision(ESRI.ArcGIS.Geometry.ISpatialReference@,System.Boolean)">
+            <summary>
+            设置空间参考是否为高/低精度,在SDE中，必须设置为高精度（isHighPrecision为true），在文件型数据中，使用低精度（isHighPrecision为false）
+            </summary>
+            <param name="spatialReference">The spatial reference.</param>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.Private.SpatialReference.ICoordinateSystem.Datum">
+            <summary>
+            大地基准
+            </summary>
+            <value>The datum.</value>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.CreateProjectedCoordinateSystem(Geoway.ADF.GIS.Utility.enumZoneType,Geoway.ADF.GIS.Utility.enumPrjType,System.Int32)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.CreateGeographicCoordinateSystem”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.SetDefaultXYTolerance(ESRI.ArcGIS.Geometry.ISpatialReference@)">
+            <summary>
+            设置空间参考的默认Tolerance
+            </summary>
+            <param name="spatialReference">待设置的空间参考.</param>
+        </member>
+        <!-- 对于成员“M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.SetSpatialReferencePrecision(ESRI.ArcGIS.Geometry.ISpatialReference@,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.CreateSpatialReference(Geoway.ADF.GIS.Utility.enumZoneType,Geoway.ADF.GIS.Utility.enumPrjType,System.Int32)">
+            <summary>
+            只支持ArcGIS内置的空间参考，目前实现了北京54，西安80，WGS1984
+            </summary>
+            <param name="zoneType"></param>
+            <param name="projectionType"></param>
+            <param name="zoneNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.getAbbreviation(Geoway.ADF.GIS.Utility.enumZoneType,Geoway.ADF.GIS.Utility.enumPrjType,System.Int32)">
+            <summary>
+            获取缩写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.getAliasName(Geoway.ADF.GIS.Utility.enumZoneType,Geoway.ADF.GIS.Utility.enumPrjType,System.Int32)">
+            <summary>
+            获取别名
+            </summary>
+            <param name="zoneType"></param>
+            <param name="projectionType"></param>
+            <param name="zoneNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.getName(Geoway.ADF.GIS.Utility.enumZoneType,Geoway.ADF.GIS.Utility.enumPrjType,System.Int32)">
+            <summary>
+            获取空间参考名称  命名方式：椭球名称_分带方式名称_投影名称_带号名称（含带号）或中央经线名称（不含带号）
+            如：Xian_1980_3_Degree_GK_Zone_41（含带号） / Xian_1980_3_Degree_GK_CM_123E（不含带号）
+            </summary>
+            <param name="zoneType"></param>
+            <param name="projectionType"></param>
+            <param name="zoneNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemBase.setDomain(Geoway.ADF.GIS.Utility.enumZoneType,System.Int32,ESRI.ArcGIS.Geometry.ISpatialReference@)">
+            <summary>
+            Sets the domain.暂时不用
+            </summary>
+            <param name="zoneType">Type of the zone.</param>
+            <param name="zoneNumber">The zone number.</param>
+            <param name="spatialReference">The spatial reference.</param>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.Private.SpatialReference.Beijing1954.Datum">
+            <summary>
+            大地基准
+            </summary>
+            <value>The datum.</value>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.Private.SpatialReference.CGCS2000">
+            <summary>
+            WGS1984空间参考工具类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemFactory">
+            <summary>
+            系统空间参考工厂
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.Private.SpatialReference.CoordinateSystemFactory.CreateCoordinate(Geoway.ADF.GIS.Utility.enumDatum)">
+            <summary>
+            创建空间参考工具类
+            </summary>
+            <param name="Datum">大地基准</param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.Private.SpatialReference.WGS1984">
+            <summary>
+            WGS1984空间参考工具类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.Private.SpatialReference.Xian1980">
+            <summary>
+            Xian1980空间参考工具类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.UCSQLGenerator.InitFields(System.Collections.Generic.List{Geoway.ADF.MIS.Utility.Core.ItemInfo})">
+            <summary>
+            初始化
+            </summary>
+            <param name="layers">图层集</param>
+        </member>
+        <member name="F:Geoway.ADF.GIS.Utility.UCSQLGenerator.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.UCSQLGenerator.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.Utility.UCSQLGenerator.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.UCSQLGenerator.SelectFieldName">
+            <summary>
+            选中的字段名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.UCSQLGenerator.IsShowValidButton">
+            <summary>
+            是否显示验证按钮
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.Utility.UCSQLGenerator.GetValidValueEventArgs">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.UCSQLGenerator.GetValidValueEventArgs.ValidResult">
+            <summary>
+            验证结果
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.UCSQLGenerator.GetValidValueEventArgs.SqlCondition">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.Utility.UCSQLGenerator.GetValidValueEventArgs.InValidMessage">
+            <summary>
+            非法信息
+            </summary>
+        </member>
+    </members>
+</doc>

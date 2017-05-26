@@ -1,0 +1,2276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Geoway.ADF.MIS.DB</name>
+    </assembly>
+    <members>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.DbTypeID">
+            <summary>
+            该值和Geoway.ADF.MIS.DataModel.DBDataType的值对应。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.IsDefaultValueAllowed">
+            <summary>
+            默认为true。是否允许设置默认值
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.IsLengthChangable">
+            <summary>
+            获取或设置长度是否可变。默认false
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.IsScaleChangable">
+            <summary>
+            获取或设置小数位数是否可变。默认false
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.NameSynonym">
+            <summary>
+            Name字段的同义词
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.Descriptor">
+            <summary>
+            字段类型的描述性信息
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.MaxLength">
+            <summary>
+            文本最大长度
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.DefaultLength">
+            <summary>
+            字符串默认长度。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.CurLength">
+            <summary>
+            实际长度
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.MaxScale">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.DefaultScale">
+            <summary>
+            默认小数位数。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBDataTypeInfo.CurScale">
+            <summary>
+            实际小数位数
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.DBDataType">
+            <summary>
+            数据库字段类型全部集合,其他数据字段定义必须是此集合的子集
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.UnKnown">
+            <summary>
+            未知数据类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.SQL_Varchar">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.SQL_Int">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.SQL_BigInt">
+            <summary>
+            长整型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.SQL_Float">
+            <summary>
+            浮点型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.SQL_Decimal">
+            <summary>
+            高精度浮点型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.SQL_Datetime">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.SQL_Image">
+            <summary>
+            二进制
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ORA_Varchar2">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ORA_Number">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ORA_NumberL">
+            <summary>
+            长整型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ORA_Float">
+            <summary>
+            浮点型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ORA_Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ORA_Blob">
+            <summary>
+            二进制
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ORA_Geometry">
+            <summary>
+            几何要素字段
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Short">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Long">
+            <summary>
+            长整型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Decimal">
+            <summary>
+            高精度浮点型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Single">
+            <summary>
+            浮点型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Varchar">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Longtext">
+            <summary>
+            长文本
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Boolean">
+            <summary>
+            布尔型（Bit）
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Blob">
+            <summary>
+            二进制
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.DBDataType.ACCESS_Datetime">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.Enum.EnumDBOperate">
+            <summary>
+            用于标识数据库写入操作指令
+            插入
+            更新
+            删除
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.IDBRequired">
+            <summary>
+            需要设置DBHelper的对象接口抽象
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.IDBRequired.SetDBHelper(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            设置DBHelper
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper">
+            <summary>
+            通用数据库操作类，支持Oracle、PostgreSQL、SQLite、SQLServer、MySQL、Access
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.SaveAs(System.String)">
+            <summary>
+            持久化数据库连接对象到一个文件
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.Clone">
+            <summary>
+            复制一个新对象，复制对象的所有属性值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.BeginTransaction">
+            <summary>
+            开启事务，仅支持DMS,不支持DDL
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.Commit">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.Rollback">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.connect">
+            <summary>
+            如果连接不为空，则状态不为中断，则不创建连接，重用现有连接
+            如果连接状态为中断，则先关闭连接并建立新的连接。
+            </summary>
+            <returns>连接创建成功由返回为true,否则抛出异常:数据库连接失败</returns>    
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.TryConnect">
+            <summary>
+            尝试数据库连接，任何情况下都不返回异常
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DisConnect">
+            <summary>
+            断开数据库连接
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.IsConnected">
+            <summary>
+            检查连接状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetConnectionParas">
+            <summary>
+            获取当前数据库连接参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetEncryptedConnectionString">
+            <summary>
+            获取加密的连接字符串。
+            格式如：dbtype=type;Name=name;...
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetConnInfoString">
+            <summary>
+            获取连接信息字符串，非ConnectString。eg：Oracle:Server/DBName/DBUser
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.Exist(System.String,System.String)">
+            <summary>
+            判读指定的数据实体表数据中,是否存在指定条件的数据
+            </summary>
+            <param name="tableName">实体表</param>
+            <param name="whereCluse">查询条件</param>
+            <returns>true=存在,false=不存在</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.FieldContainsValue(System.String,System.String)">
+            <summary>
+            判断字段是否有值 
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="fldName">字段名</param>
+            <returns>true=存在,false=不存在</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DoSQL(System.String)">
+            <summary>
+            执行指定SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>返回受影响的行数，如果SQL语句引发错误，将抛出一个异常</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DoSQL(System.String,System.Collections.IList)">
+            <summary>
+            执行指定SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paraList">参数列表</param>
+            <returns>返回受影响的行数，如果SQL语句引发错误，将抛出一个异常</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ExcuteUpdate(System.String)">
+            <summary>
+            执行sql语句。
+            </summary>
+            <param name="sql"></param>
+            <returns>当受影响的行数大于等于0时返回true,否则返回false。sql语句错误，将抛出异常。DDL一般返回0。</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DoQuery(System.String)">
+            <summary>
+            执行查询
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>返回IDataReader对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DoQuery(System.String,System.Collections.IList)">
+            <summary>
+            执行查询
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paraList">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.CloseReader">
+            <summary>
+            关闭数据库读游标。
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DoQueryEx(System.String,System.String,System.Boolean)">
+            <summary>
+            执行查询
+            </summary>
+            <param name="table">返回的DataTable的Name属性</param>
+            <param name="sql"></param>
+            <param name="release">是否在保留该DataTable以复用。true不保存，false保存</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DoQueryEx(System.String)">
+            <summary>
+            执行查询,返回名为QueryResult的DataTable
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DoQueryEx(System.String,System.Data.IDbDataParameter[])">
+            <summary>
+            通过传入参数查询。
+            注意：改查询结果不保留在查询缓存中。
+            </summary>
+            <param name="queryString">sql语句</param>
+            <param name="parameters">参数的集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.InsertRow(System.String,System.Object[][])">
+            <summary>
+            数据库插入数据
+            </summary>
+            <param name="tableName"></param>
+            <param name="para">一个存储字段、值的二维数组。格式: Name Value Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DeleteRow(System.String,System.String)">
+            <summary>
+            根据指定条件删除一行数据
+            </summary>
+            <param name="tableName"></param>
+            <param name="strfilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.UpdateRow(System.String,System.Object[][],System.String)">
+            <summary>
+            更新一行数据。
+            </summary>
+            <param name="tableName"></param>
+            <param name="para">一个存储字段、值的二维数组。格式: Name Value Type</param>
+            <param name="strfilter">过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.QueryScalar(System.String)">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。忽略额外的列或行。
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ExcuteStoreProcedure(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行存储过程，返回输出参数列表
+            </summary>
+            <param name="spName"></param>
+            <param name="spParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.SaveTable(System.String)">
+            <summary>
+            保存内存中的DataTable数据，该DataTable必须是通过查询得到的，并且有严格的要求，比如主键。
+            该方法不是线程安全的
+            </summary>
+            <param name="tbName">表名</param>
+            <returns>成功与否</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ReleaseTable(System.String,System.Boolean)">
+            <summary>
+            释放内存中指定名称DataTable的数据
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ReleaseTable(System.String)">
+            <summary>
+            释放内存中指定名称DataTable的数据
+            </summary>
+            <param name="tbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetSysParamDefaultValue(System.String)">
+            <summary>
+            获取系统参数默认值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.SaveSysParamDefaultValue(System.String,System.String)">
+            <summary>
+            保存系统参数默认值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.getUniversalString(System.String)">
+            <summary>
+            处理特殊字符'_'、'%'，替换成'\_', '\%'
+            </summary>
+            <param name="strQueryText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.getLowerString(System.String)">
+            <summary>
+            获取将字段值转换为小写的SQL语句段，如：LOWER(F_Name)
+            </summary>
+            <param name="filedName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetDateString(System.DateTime)">
+            <summary>
+            获取日期SQL语句
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetDateTimeString(System.DateTime)">
+            <summary>
+            获取日期时间SQL语句
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.getServerDate">
+            <summary>
+            获取服务器时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetServerDateTimeString">
+            <summary>
+            获取服务器时间SQL格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.IsBlobNull(System.String,System.String,System.String)">
+            <summary>
+            判断Blob字段的数据是否为空
+            </summary>
+            <param name="condition"></param>
+            <param name="tblName"></param>
+            <param name="blobField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetTableColList(System.String,System.String,System.String)">
+            <summary>
+            获取表的指定列的单一值。select distint([colname]) from table where filter
+            </summary>
+            <param name="tblName"></param>
+            <param name="colName"></param>
+            <param name="whereClause"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetTableList">
+            <summary>
+            获得数据库中的表列表。
+            说明：对于ACCESS数据库，返回表(TABLE)和视图(VIEW)
+                对于Oracle数据库，返回登录用户的用户表(User TABLE)
+                对于SQLServer数据库，返回基本表(BASE TABLE)和视图(VIEW)
+            </summary>
+            <returns>表列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetUserTables">
+            <summary>
+            获取用户创建的表集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.IsTableExist(System.String)">
+            <summary>
+            判断指定的表是否存在
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.TableContainsData(System.String)">
+            <summary>
+            判断表中是否存在数据
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetColumns(System.String)">
+            <summary>
+            获取指定表的列信息
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetColumn(System.String,System.String)">
+            <summary>
+            获取数据库字段信息
+            </summary>
+            <param name="tableName">表名称</param>
+            <param name="colName">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ClearPrimaryKeys(System.String,System.String)">
+            <summary>
+            清除指定表的主键约束。
+            </summary>
+            <param name="table"></param>
+            <param name="name">主键名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.SetPrimaryKeys(System.String,System.String[])">
+            <summary>
+            设置数据库表的主键。
+            注意：不检查是否已存在。可以先调用ClearPrimaryKeys方法清除主键。
+                设置主键后需要重新维护数据库表，以保证DML（数据操作）的高效。
+            </summary>
+            <param name="table"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetEscapedString(System.String)">
+            <summary>
+            返回转义特殊字符后的字符串。eg：'''转义为''''。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetLikeFieldDecorate(System.String,System.Boolean)">
+            <summary>
+            获取Like关键字大小写敏感时的SQL语句
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="ignoreCase">是否忽略大小写</param>
+            <returns>处理之后的Like字句</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetLikeClause(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            获取一个简单Like从句。
+            eg: field like ('%value%')
+            更复杂的like语句，请使用GetLikeFieldDecorate和GetLikeString的组合进行处理。
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="key">待匹配的关键字</param>
+            <param name="pre">是否加前缀限定</param>
+            <param name="after">是否加后缀限定</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.CreateDbParameter">
+            <summary>
+            创建数据库变量对象，用于SQL执行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.FormatParameterName(System.String)">
+            <summary>
+            格式化sql语句中的参数名称，eg:name-->@name
+            </summary>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.CheckDpValidate(System.Data.IDataParameter)">
+            <summary>
+            检查DataParameter是否有效。
+            </summary>
+            <param name="dp"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetDataTypes">
+            <summary>
+            获取当前数据库连接支持的字段类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetDBDataType(System.Int32)">
+            <summary>
+            为了兼容原有的Geoway.ADF.MIS.DataModel.DBDataType中的类型定义,添加此转换方法。
+            不可跨数据库使用。
+            </summary>
+            <param name="typeId">Geoway.ADF.MIS.DataModel.DBDataType中的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.GetKeyFieldDBDataTypeInfo">
+            <summary>
+            获取当前数据库可以作为主键的字段的类型信息
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBName">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBPwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBPath">
+            <summary>
+            路径（Access有效）
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBServer">
+            <summary>
+            服务器IP
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.CloseConnectionAfterAction">
+            <summary>
+            设置在每个操作结束后是否断开数据库连接。默认false。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBSid">
+            <summary>
+            数据库实例ID，Oracle有效
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.Key">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ActuralDBType">
+            <summary>
+            获取真实数据库类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBDriver">
+            <summary>
+            数据库驱动，Oracle有效
+            请不要设置DBDriver属性!!!
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBUser">
+            <summary>
+            登录用户
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DBPort">
+            <summary>
+            端口，Oracle有效
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.EnableLog">
+            <summary>
+            指示是否向日志输出SQL语句
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.EnableOracleSys">
+            <summary>
+            是否支持Oracle数据库sys账户连接
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.errDescription">
+            <summary>
+            错误描述，预留属性
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ActiveConnection">
+            <summary>
+            当前活动的数据库连接对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ActiveCommand">
+            <summary>
+            获取最后一个执行的Command
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.ConnectString">
+            <summary>
+            连接参数，支持直接设置参数
+            </summary>
+        </member>
+        <!-- 对于成员“P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.CommandTimeout”忽略有格式错误的 XML 注释 -->
+        <member name="P:Geoway.ADF.MIS.DB.Public.Interface.IDBHelper.DDTekLicensePath">
+            <summary>
+            DDTek License 文件路径（DDTek.lic绝对路径）
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.Enum.EnumDBFieldType">
+            <summary>
+            内部生成Sql语句时使用的字段类型枚举
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.Enum.EnumDBFieldType.FTNumber">
+            <summary>
+            数字
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.ORSession">
+             <summary>
+            目的：对象关系操作类
+            创建人：zs
+            创建日期：2013-7-12
+            备注：
+            修改描述：
+            修改人：
+            修改日期：2013-7-12
+             </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.ORSession._isOpen">
+            <summary>
+            是否开启
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.#ctor(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.OpenSession">
+            <summary>
+            开启Session
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.GetPrimaryKeyID``1(``0)">
+            <summary>
+            获取主键唯一ID值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.Insert2DB``1(``0,System.Boolean)">
+            <summary>
+            插入数据库
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbObject"></param>
+            <param name="withBlob">是否插入二进制数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.Insert2DB``1(``0)">
+            <summary>
+            插入带二进制数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.Update2DB``1(``0)">
+            <summary>
+            保存对象到数据库
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.Delete``1(``0)">
+            <summary>
+            从数据库中删除对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.Query``1(System.Type,System.String,System.Boolean)">
+            <summary>
+            从数据库中查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbObjectType"></param>
+            <param name="strFilter"></param>
+            <param name="withBlob">是否查询二进制数据</param>
+            <returns>查询表的结果</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.Query``1(System.Type,System.String)">
+            <summary>
+            查询所有属性 带有二进制属性
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dbObjectType"></param>
+            <param name="strFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.GetPrimaryKeyString(System.Collections.Generic.IList{Geoway.ADF.MIS.DB.Public.DBFieldItem},Geoway.ADF.MIS.DB.ORTable)">
+            <summary>
+            获取主键条件语句
+            </summary>
+            <param name="dbFields"></param>
+            <param name="orTableInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.GetSelectedField(System.Collections.Generic.IList{Geoway.ADF.MIS.DB.Public.DBFieldItem})">
+            <summary>
+            获取选择SQL语句
+            </summary>
+            <param name="dbFields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.GetORTableInfo(System.Type)">
+            <summary>
+            获取ORTable对象
+            </summary>
+            <param name="dbObjectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.GetDBFieldItem(System.Type,System.Object)">
+            <summary>
+            获取DBField集合
+            </summary>
+            <param name="dbObjectType"></param>
+            <param name="dbObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.BinaryDeserialize(System.Byte[],System.Type)">
+            <summary>
+            把一个二进制数据流的内容进行反序列化
+            </summary>
+            <param name="stream">反序列化的数据流</param>
+            <returns>反序列化后的对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.BinarySerialize(System.Object)">
+            <summary>
+            把一个对象进行二进序列化后存入到一个数据流中
+            </summary>
+            <param name="o">要序列化的对象</param>
+            <returns>对象序列化后的数据流</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.ORSession.MakeQueryResultConsistant(System.Reflection.PropertyInfo,System.Data.DataRow,Geoway.ADF.MIS.DB.Public.DBFieldItem,System.Object)">
+            <summary>
+            说明：数据库类型与类中属性类型不一致时的处理办法
+            </summary>
+            <param name="fi"></param>
+            <param name="dr"></param>
+            <param name="dbField"></param>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.ORSession.DB">
+            <summary>
+            数据访问层
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DBHelper">
+            <summary>
+            实现IDBHelper接口抽象类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.BeforeExecute">
+            <summary>
+            在执行sql语句之前运行的方法。可以重写以便在运行sql之前对运行条件进行修改
+            如postsql中，调整sql字段名称
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.IsNeedReconnect">
+            <summary>
+            是否需要重连数据库
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Create(System.String,System.String)">
+            <summary>
+            通过程序集和类型名称创建DBHelper对象。
+            </summary>
+            <param name="assembly"></param>
+            <param name="typeName"></param>
+            <returns>创建成功则返回IDBHelper接口对象，否则返回null</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Create(Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType)">
+            <summary>
+            通过数据库类型创建数据库访问实例对象DBHelper
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <returns>返回实现IDBHelper接口的数据库访问对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Create(Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType,Geoway.ADF.MIS.DB.Public.DBHelper.enumDBDriver)">
+            <summary>
+            通过数据库类型和驱动类型创建DBHelper对象。
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="driver">驱动类型</param>
+            <returns>返回实现IDBHelper接口的数据库访问对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetDBHelper(System.String)">
+            <summary>
+            获取指定key的数据库连接。忽略打开状态。
+            </summary>
+            <param name="key">标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetDBHelper(System.Int32)">
+            <summary>
+            获取指定索引处的数据库连接。
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetDBHelper(System.String,System.Boolean)">
+            <summary>
+            获取数据库连接对象。
+            </summary>
+            <param name="key">标识</param>
+            <param name="open">指定是否打开数据库连接</param>
+            <returns>返回数据库连接对象，如果open=true并且打开失败则抛出异常</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetLikeFieldDecorate(System.String,System.Boolean)">
+            <summary>
+            获取对like字段的修饰。eg: FILED LIKE。
+            注意：常规情况下ignoreCase参数是无效的，只有特定数据库才有效。
+            如果进行了修饰，则返回大写修饰的字段。
+            </summary>
+            <param name="fieldName"></param>
+            <param name="ignoreCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Clone">
+            <summary>
+            克隆当前数据库连接，并将其放入到数据库连接缓存中。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.BeginTransaction">
+            <summary>
+            启动事务
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Commit">
+            <summary>
+            事务提交
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Rollback">
+            <summary>
+            事务回滚
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.connect">
+            <summary>
+            数据库连接状态
+            </summary>
+            <returns> true=已连接,false=未连接或失败</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.TryConnect">
+            <summary>
+            打开数据库连接
+            </summary>
+            <returns>true=连接处于打开状态</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DisConnect">
+            <summary>
+            关闭与数据库的连接
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.IsConnected">
+            <summary>
+            数据库连接状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Exist(System.String,System.String)">
+            <summary>
+             判读指定的数据实体表数据中,是否存在指定条件的数据
+            </summary>
+            <param name="tableName">实体表</param>
+            <param name="whereCluse">查询条件</param>
+            <returns>true=存在,false=不存在</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.FieldContainsValue(System.String,System.String)">
+            <summary>
+            判断字段是否有值 
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="fldName">字段名</param>
+            <returns>true=存在,false=不存在</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DoSQL(System.String)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DoSQL(System.String,System.Collections.IList)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paraList">参数列表</param>
+            <returns>返回受影响的行数</returns> 
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ExcuteUpdate(System.String)">
+            <summary>
+            执行更新SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DoQuery(System.String)">
+            <summary>
+            执行查询SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>返回只进数据结果集流IDataReader</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DoQuery(System.String,System.Collections.IList)">
+            <summary>
+            执行查询SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paraList">参数列表</param>
+            <returns>返回只进数据结果集流IDataReader</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DoQueryEx(System.String,System.String,System.Boolean)">
+            <summary>
+            执行查询SQL语句
+            </summary>
+            <param name="table">表名称</param>
+            <param name="sql">SQL语句</param>
+            <param name="release">结果集是否释放</param>
+            <returns>返回DataTable数据结果集</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DoQueryEx(System.String)">
+            <summary>
+            执行查询SQL语句
+            </summary>
+            <param name="queryString">SQL语句</param>
+            <returns>返回DataTable数据结果集</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DoQueryEx(System.String,System.Data.IDbDataParameter[])">
+            <summary>
+            执行查询SQL语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="parameters">参数列表</param>
+            <returns>返回DataTable数据结果集</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ExcuteStoreProcedure(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="spName">存储过程名称</param>
+            <param name="spParams">存储过程参数列表</param>
+            <returns>返回结果参数列表</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.SaveTable(System.String)">
+            <summary>
+            为指定 System.Data.DataTable 中每个已插入、已更新或已删除的行调用相应的 INSERT、UPDATE 或 DELETE 语句。
+            </summary>
+            <param name="tbName"> 用于更新数据源的 System.Data.DataTable表名称</param>
+            <returns>返回是否成功更新,true=成功</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ReleaseTable(System.String)">
+            <summary>
+            释放内存中指定名称DataTable的数据
+            </summary>
+            <param name="tbName">DataTable名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.CloseReader">
+            <summary>
+            关闭数据库读游标。
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetNextValidID(System.String,System.String)">
+            <summary>
+            获取新的唯一值
+            </summary>
+            <param name="tblName">数据实体表明</param>
+            <param name="fldName">字段名称</param>
+            <returns>新的唯一值</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.InsertRow(System.String,System.Object[][])">
+            <summary>
+            数据库插入数据
+            </summary>
+            <param name="tableName"></param>
+            <param name="para">一个存储字段、值的二维数组。格式: Name Value Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.DeleteRow(System.String,System.String)">
+            <summary>
+            根据指定条件删除一行数据
+            </summary>
+            <param name="tableName"></param>
+            <param name="strfilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.UpdateRow(System.String,System.Object[][],System.String)">
+            <summary>
+            更新一行数据。
+            </summary>
+            <param name="tableName"></param>
+            <param name="para">一个存储字段、值的二维数组。格式: Name Value Type</param>
+            <param name="strfilter">过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetSysParamDefaultValue(System.String)">
+            <summary>
+            获取系统参数默认值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.SaveSysParamDefaultValue(System.String,System.String)">
+            <summary>
+            保存系统参数默认值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetConnInfoString">
+            <summary>
+            获取连接信息字符串，非ConnectString。eg：Oracle:Server/DBName/DBUser
+            </summary>
+            <returns></returns>       
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.getEscapeString">
+            <summary>
+            返回转义特殊字符后的字符串。eg：'''转义为''''。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetTableColList(System.String,System.String,System.String)">
+            <summary>
+            获取表的指定列的单一值。select distint([colname]) from table where filter
+            </summary>
+            <param name="tblName"></param>
+            <param name="colName"></param>
+            <param name="whereClause"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ReadBlob2Bytes(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            读取二进制Blob字段数据
+            </summary>
+            <param name="id">唯一值</param>
+            <param name="idfield">唯一值字段</param>
+            <param name="tblName">实体表名</param>
+            <param name="blobField">Blob字段</param>
+            <returns>字节数据流</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ReadBlob2Bytes(System.String,System.String,System.String)">
+            <summary>
+            读取二进制Blob字段数据
+            </summary>
+            <param name="condition">查询条件</param>
+            <param name="tblName">实体表名</param>
+            <param name="blobField">Blob字段</param>
+            <returns>字节数据流</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ReadBlob2File(System.String,System.String,System.String,System.String)">
+            <summary>
+            读取二进制Blob字段数据
+            </summary>
+            <param name="filename">文件路径</param>
+            <param name="condition">查询条件</param>
+            <param name="tblName">实体表名</param>
+            <param name="blobField">Blob字段</param> 
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ReadBlob2Object(System.String,System.String,System.String)">
+            <summary>
+            读取二进制Blob字段数据
+            </summary>       
+            <param name="tblName">实体表名</param>
+            <param name="condition">查询条件</param>
+            <param name="blobField">Blob字段</param>
+            <returns>object </returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.SaveBytes2Blob(System.Int32,System.String,System.String,System.String,System.Byte[]@)">
+            <summary>
+            保存二进制Blob字段数据
+            </summary>
+            <param name="id">唯一值</param>
+            <param name="idfield">唯一值字段</param>
+            <param name="tblName">实体表名</param>
+            <param name="blobField">Blob字段</param>
+            <param name="blobField">字节数据流</param> 
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.SaveBytes2Blob(System.String,System.String,System.String,System.Byte[]@)">
+            <summary>
+            保存二进制Blob字段数据
+            </summary>
+            <param name="condition">查询条件</param> 
+            <param name="tblName">实体表名</param>
+            <param name="blobField">Blob字段</param>
+            <param name="blobField">字节数据流</param> 
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetParamName(System.String)">
+            <summary>
+            获取用于sql语句中的参数名称。eg:@name ? ect.
+            默认返回"@name"
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.FormatParameterName(System.String)">
+            <summary>
+            格式化sql语句中的参数名称，eg:name-->@name
+            </summary>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.SaveFile2Blob(System.String,System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            将文件以二进制形式保存到数据库表的Blob字段里
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="id">唯一值</param>
+            <param name="idfield">唯一值字段名</param>
+            <param name="tblName">表名</param>
+            <param name="blobField">Blob字段</param>
+            <param name="advanceMode"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.SaveFile2Blob(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            将文件以二进制形式保存到数据库表的Blob字段里
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="condition">查询条件</param>
+            <param name="tblName">表名</param>
+            <param name="blobField">Blob字段名</param>
+            <param name="advanceMode"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetUserTables">
+            <summary>
+            获取用户创建的表集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetEncryptedConnectionString">
+            <summary>
+            获取加密的连接字符串。
+            格式如：dbtype=type;Name=name;...
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Load(System.String,System.String)">
+            <summary>
+            从持久化的文件中加载数据库对象。不检查是否可以连接上
+            </summary>
+            <param name="fileName"></param>
+            <param name="licencePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Load(System.String)">
+            <summary>
+            根据初始化解析连接字符串,创建数据库连接实例
+            </summary>
+            <param name="connectInfo">连接字符串信息</param>
+            <returns>IDBHelper连接实例接口对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Load(Geoway.ADF.MIS.DB.Public.DBConnectionParas)">
+            <summary>
+            根据初始化参数对象,创建数据库连接实例
+            </summary>
+            <param name="connectInfo">连接字符串信息</param>
+            <returns>IDBHelper连接实例接口对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.SaveAs(System.String)">
+            <summary>
+            配置参数另存
+            </summary>
+            <param name="fileName">存储文件路径</param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetColumns(System.String)">
+            <summary>
+            获取指定表的列信息
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.TableContainsData(System.String)">
+            <summary>
+            判断表中是否存在数据
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.Remove(Geoway.ADF.MIS.DB.Public.DBHelper)">
+            <summary>
+            删除缓存中的数据库连接对象
+            </summary>
+            <param name="db">DBHelper数据连接对象</param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetConnectionParas">
+            <summary>
+            获取当前数库配置参数
+            </summary>
+            <returns>数据库连接参数对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.ToString">
+            <summary>
+            获取当前数据库连接信息字符串
+            </summary>
+            <returns>返回 连接信息字符串</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetDBDataType(System.Int32)">
+            <summary>
+            为了兼容原有的Geoway.ADF.MIS.DataModel.DBDataType中的类型定义,添加此转换方法。
+            不可跨数据库使用。
+            </summary>
+            <param name="typeId">Geoway.ADF.MIS.DataModel.DBDataType中的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.GetEscapedString(System.String)">
+            <summary>
+            返回转义特殊字符后的字符串。eg：'''转义为''''。
+            </summary>
+            <param name="input">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBHelper.getLowerString(System.String)">
+            <summary>
+            根据当前数据库(不同的数据库小写转换函数名称不一样)提供的小写函数转换成小写字符串
+            </summary>
+            <param name="value">文本字符串</param>
+            <returns>返回 写小写字符串</returns>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.CachedDBHelper">
+            <summary>
+            缓存的数据库连接。
+            一个数据库连接创建后，会将该连接缓存到内存中。可以修改DBHelper的Key来索引它。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.ReconnectSeconds">
+            <summary>
+            重连的时间
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.GlobalDBHelper">
+            <summary>
+            全局数据库连接，通常为首次创建数据库连接时的连接对象，如果不存在则返回null。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBName">
+            <summary>
+            当前数据库名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBPwd">
+            <summary>
+            数据库访问密码
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBPath">
+            <summary>
+            数据库访问路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBServer">
+            <summary>
+            数据库所在服务器IP地址
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBSid">
+            <summary>
+            数据库实例ID，Oracle有效
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.Key">
+            <summary>
+            数据库Key标识
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBType">
+            <summary>
+            数据库驱动类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBDriver">
+            <summary>
+            数据库连接驱动
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBUser">
+            <summary>
+            数据库用户名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DBPort">
+            <summary>
+            数据库端口
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.ActiveConnection">
+            <summary>
+            当前数据连接对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.ActiveCommand">
+            <summary>
+            当前SQL命令执行对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.CommandTimeout">
+            <summary>
+            连接超时时间
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.DDTekLicensePath">
+            <summary>
+            DDTek License文件路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBHelper.ParamaterPrefix">
+            <summary>
+            返回SQL语句中参数前缀，如:、?等等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType">
+            <summary>
+            数据库驱动类型枚举常量
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.NotSupport">
+            <summary>
+            不支持的数据库类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_ACCESS">
+             <summary>
+            Microsoft Access ADO
+             </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_SQLServer">
+            <summary>
+            Microsoft SQLServer ADO
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_Oracle">
+            <summary>
+            Oracle 客户端 ADO
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_Oracle_Local">
+            <summary>
+            Oracle DDTek
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_SQLite">
+            <summary>
+            SQLite
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_MySQL">
+            <summary>
+            MySQL
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_Postgre">
+            <summary>
+            PostgreSQL
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_Beyon">
+            <summary>
+            BeyonDB
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType.DB_MongoDB">
+            <summary>
+            MongoDB
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DBHelper.enumDBDriver">
+            <summary>
+            DB Driver
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.DBColumnInfo.Get_DDL(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            获取数据定义语言。
+            </summary>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBColumnInfo.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBColumnInfo.DataType">
+            <summary>
+            获取该字段对应的字段元数据。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBColumnInfo.Precision">
+            <summary>
+            精度，表现为一个数字的整数部分和小数部分位数的和。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBColumnInfo.Scale">
+            <summary>
+            小数。一个数字的小数部分的位数。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.DBColumnInfo.Nullable">
+            <summary>
+            是否允许空值
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.PostgreSQL.PostgreDBDataTypeInfo.SMALLINT">
+            <summary>
+            -32768 到 +32767的整数
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.PostgreSQL.PostgreDBDataTypeInfo.INT">
+            <summary>
+            -2147483648 到 +2147483647之间的整数。(Int32)
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.PostgreSQL.PostgreDBDataTypeInfo.BIGINT">
+            <summary>
+            -9223372036854775808 到 9223372036854775807(long)
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.PostgreSQL.PostgreDBDataTypeInfo.NUMERIC">
+            <summary>
+            无限制的自由数字
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.PostgreSQL.PostgreDBDataTypeInfo.TEXT">
+            <summary>
+            无限制大小的字符
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DBObject">
+            <summary>
+            目的：数据库实体基类
+            创建人：刘仕杰
+            创建日期：2010-11-26
+            修改描述：
+            修改人：
+            修改日期：
+            备注：
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.IDBRowObject">
+            <summary>
+            数据库行对象接口定义
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.IDBRowObject.Insert(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            数据库插入操作
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.IDBRowObject.Update(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            数据库更新操作
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.IDBRowObject.Delete(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            数据库删除操作
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.#ctor(System.String,System.String,Geoway.ADF.MIS.DB.Public.Enum.EnumDBOperate)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="keyFieldName"></param>
+            <param name="tableName"></param>
+            <param name="dbOp"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.Insert(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            数据库插入操作
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.Update(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            数据库更新操作
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.Delete(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            数据库删除操作
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.DoSQL(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.String)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.Select(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            选择表所有的记录集合
+            </summary>
+            <returns>整个表集合</returns>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.SelectWhere(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.String)">
+            <summary>
+            选择满足条件的记录集合
+            </summary>
+            <param name="iDBH">数据库处理接口</param>
+            <param name="whereClause">条件过滤(不包括where关键字)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.SelectWhere(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.String,System.String)">
+            <summary>
+            选择满足条件的记录集合
+            </summary>
+            <param name="iDBH">数据库处理接口</param>
+            <param name="whereClause">条件过滤(不包括where字符串)</param>
+            <param name="orderByClause">排序语句(不包括order by关键字)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject.GetNextID(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            从D管理器获取记录ID
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBObject.KeyFieldName">
+            <summary>
+            关键字字段名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBObject.DBOperate">
+            <summary>
+            数据库写入操作指令(插入\更新\删除)
+            </summary>
+        </member>
+        <!-- 对于成员“T:Geoway.ADF.MIS.DB.Public.Interface.IDBObject`1”忽略有格式错误的 XML 注释 -->
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBObject`1.SelectT(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            选择
+            </summary>
+            <returns>满足条件的数据列表</returns>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.Interface.IDBObject`1.SelectWhereT(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.String)">
+            <summary>
+            选择
+            </summary>
+            <returns>满足条件的数据列表</returns>
+            <param name="iDBH"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject`1.SelectT(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            选择
+            </summary>
+            <returns>满足条件的数据列表</returns>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBObject`1.SelectWhereT(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.String)">
+            <summary>
+            选择
+            </summary>
+            <returns>满足条件的数据列表</returns>
+            <param name="iDBH"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Private.LicenseCheck">
+            <summary>
+            假设LicenseCheck为需要进行授权控制的类
+            要添加授权认证，需完成以下三步
+            1、LicenseCheck从Geoway.ADF.MIS.Hasp.Public.ADFObject继承
+            2、重载AuthorCheck虚函数，添加模块控制代码
+            3、在构造函数中调用重载后的虚函数，进行授权认证
+            
+            说明：
+            模块号分配参见Geoway.ADF.MIS.Hasp.Public命名空间的EnumModule枚举类型
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Private.LicenseCheck.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数  调用授权认证函数
+            </summary>
+            <param name="modMain">主模块，从枚举类型Geoway.ADF.MIS.Hasp.Public.EnumModule枚举类型取值</param>
+            <param name="modSub">子模块，从枚举类型Geoway.ADF.MIS.Hasp.Public.EnumModule枚举类型取值，当值为-1时不检查子模块授权</param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Private.LicenseCheck.AuthorCheck">
+            <summary>
+            重载虚函数，为认证函数添加授权认证代码
+            根据主模块号和子模块号进行授权验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.SQLStringUtility">
+            <summary>
+            SQL语句构造帮助类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetQuotedString(System.String)">
+            <summary>
+            将文本转换成适合在Sql语句里使用的字符串。
+            </summary>
+            <returns>转换后文本</returns>	
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetQuotedString(System.String,Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            将文本转换成适合在Sql语句里使用的字符串。替代原有的 GetQuotedString(string)方法
+            </summary>
+            <param name="input">待处理的字符串</param>
+            <param name="db">转换后的文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetDateString(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.DateTime)">
+            <summary>
+            返回用于Sql语句的 日期 包装字符串
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetServerDateTimeString(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            在sql语句中,用来取数据库服务器时间的描述字符串
+            陈进 2006-1-16
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetDateTimeString(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.DateTime)">
+            <summary>
+            返回用于Sql语句的 日期 时间 包装字符串
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.CheckInputString(System.String,System.Int32,System.Boolean)">
+            <summary>
+            检查输入的字符串是否合法
+            </summary>
+            <param name="s">待检查的字符串</param>
+            <param name="length">允许的最大长度</param>
+            <param name="allowEmpty">是否允许长度为0</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetConditionClause(System.Collections.Hashtable)">
+            <summary>
+            根据条件哈希表,构造SQL语句中的AND条件子句
+            </summary>
+            <param name="conditionHash">条件哈希表</param>
+            <returns>AND关系条件子句</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetInsertSQL(System.String,System.Collections.Generic.IList{Geoway.ADF.MIS.DB.Public.DBFieldItem},Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            根据传入的参数数组生成插入语句，并执行插入操作
+            自动进行不同数据库的时间格式的处理、及枚举转换成整数
+            </summary>
+            <param name="tableName"></param>
+            <param name="dbFields">字段值参数集合</param>
+            <returns>SQL语句</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetInsertSQL(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.String,Geoway.ADF.MIS.DB.Public.DBFieldItem[])">
+            <summary>
+            根据传入的参数数组生成插入语句，并执行插入操作
+            自动进行不同数据库的时间格式的处理、及枚举转换成整数
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="dbFields">字段值参数集合</param>
+            <returns>SQL语句</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetUpdateSQL(System.String,System.Collections.Generic.IList{Geoway.ADF.MIS.DB.Public.DBFieldItem},System.String,Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            公有方法，生成在更新一个数据表的SQL语句。
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="dbFields">字段值参数集合</param>
+            <param name="strfilter">Where子句</param>
+            <returns>SQL语句</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetUpdateSQL(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,System.String,System.String,Geoway.ADF.MIS.DB.Public.DBFieldItem[])">
+            <summary>
+            生成在更新一个数据表的SQL语句。
+            </summary>
+            <param name="db">IDBHelper数据库连接对象</param>
+            <param name="tableName">实体表名</param>
+            <param name="strfilter">过滤条件</param>
+            <param name="dbFields">字段值参数集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetORFilterFromList(System.String,System.Int32[])">
+            <summary>
+            获取OR过滤条件
+            </summary>
+            <param name="fieldName"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetINFilterFromList(System.String,System.Int32[])">
+            <summary>
+            获取IN过滤条件
+            </summary>
+            <param name="fieldName"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.FormatLikeFilter(System.String,System.String)">
+            <summary>
+            格式化Like查询条件
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="keyword">查询关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.FormatTopRowSql(System.String,System.String,System.String,System.Int32,System.String,System.Boolean,Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType)">
+            <summary>
+            格式化SQL语句，查询满足条件的前N条记录
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="selectFields">查询字段</param>
+            <param name="filter">查询条件</param>
+            <param name="count">返回数量</param>
+            <param name="orderField">排序字段</param>
+            <param name="desc">是否倒序排列</param>
+            <param name="dbType">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.SQLStringUtility.GetSqlValueString(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper,Geoway.ADF.MIS.DB.Public.Enum.EnumDBFieldType,System.String)">
+            <summary>
+            获取SQL插入的值，根据不同类型返回不同格式。
+            </summary>
+            <param name="db">数据库连接</param>
+            <param name="type">字段类型</param>
+            <param name="value">值</param>
+            <returns>格式化的字符串如：'abc'、to_date(...)</returns>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility">
+            <summary>
+            从数据库中安全获取数据，即当数据库中的数据为NULL时，保证读取不发生异常。
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility.InValidInt">
+            <summary>
+            当ValidateDataRow_N、ValidateReader_N发生错误时返回该数字
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility.ValidateDataRow_S(System.Data.DataRow,System.String)">
+            <summary>
+            从一个DataRow中，安全得到列colname中的值：值为字符串类型
+            </summary>
+            <param name="row">数据行对象</param>
+            <param name="colname">列名</param>
+            <returns>如果值存在，返回；否则，返回System.String.Empty</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility.ValidateDataRow_N(System.Data.DataRow,System.String)">
+            <summary>
+            从一个DataRow中，安全得到列colname中的值：值为整数类型
+            </summary>
+            <param name="row">数据行对象</param>
+            <param name="colname">列名</param>
+            <returns>如果值存在，返回；否则，返回System.Int32.MinValue</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility.ValidateDataRow_F(System.Data.DataRow,System.String)">
+            <summary>
+            从一个DataRow中，安全得到列colname中的值：值为浮点数类型
+            </summary>
+            <param name="row">数据行对象</param>
+            <param name="colname">列名</param>
+            <returns>如果值存在，返回；否则，返回System.Double.MinValue</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility.ValidateDataRow_T(System.Data.DataRow,System.String)">
+            <summary>
+            从一个DataRow中，安全得到列colname中的值：值为时间类型
+            </summary>
+            <param name="row">数据行对象</param>
+            <param name="colname">列名</param>
+            <returns>如果值存在，返回；否则，返回System.DateTime.MinValue;</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility.ValidateDataRow_L(System.Data.DataRow,System.String)">
+            <summary>
+            从一个DataRow中，安全得到列colname中的值：值为长整形
+            </summary>
+            <param name="row">数据行对象</param>
+            <param name="colname">列名</param>
+            <returns>如果值存在，返回；否则，返回System.Int64.MinValue;</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.GetSafeDataUtility.ValidateReader_L(System.Data.IDataReader,System.String)">
+            <summary>
+            从一个DataRow中，安全得到列colname中的值：值为long
+            </summary>
+            <param name="row">数据行对象</param>
+            <param name="colname">列名</param>
+            <returns>如果值存在，返回；否则，返回System.Int64.MinValue;</returns>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DBConnectionParas">
+            <summary>
+            数据库连接参数
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBDriver">
+            <summary>
+            驱动类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBPath">
+            <summary>
+            文件型数据库路径
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBServer">
+            <summary>
+            数据库服务器
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBServiceName">
+            <summary>
+            本地服务器名
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBName">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBSid">
+            <summary>
+            数据库实例标识
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBUser">
+            <summary>
+            登录用户名
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBPwd">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.Public.DBConnectionParas.Para_DBPort">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBConnectionParas.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBConnectionParas.#ctor(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBConnectionParas.#ctor(System.String)">
+            <summary>
+            初始化解析连接字符串
+            </summary>
+            <param name="attribute"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBConnectionParas.CreateConnection">
+            <summary>
+            创建数据库连接实例
+            </summary>
+            <returns>IDBHelper连接实例接口对象</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBConnectionParas.GetAttribute">
+            <summary>
+            生成Attribute连接属性字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBConnectionParas.ModifyParasValue">
+            <summary>
+            修改空间数据库SDE直连参数值(Add 2013-08-19) 
+            如:_DBPwd="JXPGISSDE@192.98.17.23/db11g" 如果直连数据库,需要重新解析修改_DBServiceName DBPwd DBDriver = DBHelper.enumDBDriver.ADO;
+            </summary> 
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBInstance">
+            <summary>
+            数据库实例
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBName">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBPwd">
+            <summary>
+            数据库用户密码
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBPath">
+            <summary>
+            Access 数据库用名路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBServer">
+            <summary>
+            SQL Server 数据服务器
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBServiceName">
+            <summary>
+            Oracle本地服务名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBSid">
+            <summary>
+            Oracle SID
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBType">
+            <summary>
+            DBType
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBDriver">
+            <summary>
+            DBDriver
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBUser">
+            <summary>
+            数据库用户名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBConnectionParas.DBPort">
+            <summary>
+            数据库端口
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DBFieldItem">
+            <summary>
+            数据库字段信息结构
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBFieldItem.#ctor(System.String,System.Object,Geoway.ADF.MIS.DB.Public.Enum.EnumDBFieldType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="fieldValue">数据</param>
+            <param name="fieldType">字段类型</param>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBFieldItem.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBFieldItem.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.Public.DBFieldItem.FieldType">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Oracle.OracleDBHelper">
+            <summary>
+            使用Oracle客户端。
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Oracle.OracleDBHelperBase.LogOra00942Error(System.String,System.String)">
+            <summary>
+            记录ORA-00942：表或视图不存在 异常的SQL
+            </summary>
+            <param name="message">异常信息</param>
+            <param name ="sql">正在执行的SQL</param>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DatabaseUtil">
+            <summary>
+            封装DB中需要用到的通用函数
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DatabaseUtil.GetBoolValue(System.String,Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType)">
+            <summary>
+            获取布尔值
+            </summary>
+            <param name="fieldvalue">字段值</param>
+            <param name="dbType">数据库类型</param>
+            <returns>返回 true,false</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DatabaseUtil.GetDateDBFunString(Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType)">
+            <summary>
+            获取数据库中的系统时间函数
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <returns>函数字符串</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DatabaseUtil.ToDBDate(Geoway.ADF.MIS.DB.Public.DBHelper.enumDBType,System.String@)">
+            <summary>
+            根据不同数据库,返回日期转换函数字符串
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="strDate">日期字符串</param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DatabaseUtil.ReadByteArrayFromFile(System.String)">
+            <summary>
+            将指定路径文件转化为字节数组
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DatabaseUtil.SaveByteArray2File(System.String,System.Byte[]@)">
+            <summary>
+            保存字节数据流到指定的文件
+            </summary>
+            <param name="filePath">文件路径</param>
+            <param name="content">字节数据流</param>
+            <returns>返回 是否成功, true= 成功</returns>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.ORTable">
+            <summary>
+            对象关系模型表标签
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.ORTable.TableName">
+            <summary>
+            物理表名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.ORTable.PrimaryKeyField">
+            <summary>
+            主键字段名
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.Public.DBWriter">
+            <summary>
+            目的：数据库写入辅助类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.#ctor(Geoway.ADF.MIS.DB.Public.Interface.IDBHelper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iDBH"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.Open">
+            <summary>
+            打开数据库连接
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.Close">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.BeginTransaction">
+            <summary>
+            开始事务处理
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.Commit">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.Rollback">
+            <summary>
+            回滚事物
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.Write(Geoway.ADF.MIS.DB.Public.DBObject)">
+            <summary>
+            执行表对象相关操作
+            </summary>
+            <param name="dbObj"></param>
+        </member>
+        <member name="M:Geoway.ADF.MIS.DB.Public.DBWriter.Write(System.Collections.IList)">
+            <summary>
+            批量写表对象
+            </summary>
+            <param name="dbObjs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.MIS.DB.ORField">
+            <summary>
+            对象关系模型字段标签
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.ORField.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.MIS.DB.ORField.FieldType">
+            <summary>
+            字段类型
+            UnKnown = -1,
+            FTNumber = 1,
+            FTString = 2,
+            FTDate = 3,
+            FTDatetime = 4,
+            [Obsolete("请不要使用该枚举值")]
+            FTServerNowDatetime = 5,
+            FTBlob = 7,
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.BeyonSQL.BeyonDBDataTypeInfo.SMALLINT">
+            <summary>
+            -32768 到 +32767的整数
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.BeyonSQL.BeyonDBDataTypeInfo.INT">
+            <summary>
+            -2147483648 到 +2147483647之间的整数。(Int32)
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.BeyonSQL.BeyonDBDataTypeInfo.BIGINT">
+            <summary>
+            -9223372036854775808 到 9223372036854775807(long)
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.BeyonSQL.BeyonDBDataTypeInfo.NUMERIC">
+            <summary>
+            无限制的自由数字
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.MIS.DB.BeyonSQL.BeyonDBDataTypeInfo.TEXT">
+            <summary>
+            无限制大小的字符
+            </summary>
+        </member>
+    </members>
+</doc>

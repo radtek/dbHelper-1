@@ -1,0 +1,63 @@
+﻿17:15:36:048
+System.Data.OracleClient.OracleException (0x80131938): ORA-01017: invalid username/password; logon denied
+
+   在 Geoway.ADF.MIS.DB.Public.DBHelper.connect()
+   在 Geoway.ADF.MIS.DB.Public.DBHelper.TryConnect()
+
+18:46:26:744
+ 
+
+Error: SDE not running on server (-101).
+Error: Could not create a connection on server 192.98.12.72, for user SDE.
+
+
+
+18:48:50:039
+System.Data.OracleClient.OracleException (0x80131938): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+
+   在 Geoway.ADF.MIS.DB.Public.DBHelper.connect()
+   在 Geoway.ADF.MIS.DB.Public.DBHelper.TryConnect()
+
+18:51:15:121
+System.Data.OracleClient.OracleException (0x80131938): ORA-12560: TNS: 协议适配器错误
+
+   在 Geoway.ADF.MIS.DB.Public.DBHelper.connect()
+   在 Geoway.ADF.MIS.DB.Public.DBHelper.TryConnect()
+
+18:51:15:124
+ORA-12560: TNS: 协议适配器错误
+，SQL:SELECT TABLESPACE_NAME FROM USER_TABLESPACES
+
+18:51:15:197
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PartitionUtility.QueryUnityInfo.QueryTablespace(IDBHelper dbHelper) 位置 E:\Stack\_Practice\PartitionModel\PartitionUtility\Class\QueryUnityInfo.cs:行号 45
+
+18:51:15:335
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PartitionUtility.QueryUnityInfo.QueryTablespace(IDBHelper dbHelper) 位置 E:\Stack\_Practice\PartitionModel\PartitionUtility\Class\QueryUnityInfo.cs:行号 61
+   在 ApplyDemo.FormMain.btnAssignTablespace_ButtonClick(Object sender, ButtonPressedEventArgs e) 位置 E:\Stack\_Practice\PartitionModel\ApplyDemo\FormMain.cs:行号 295
+   在 DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit.RaiseButtonClick(ButtonPressedEventArgs e)
+   在 DevExpress.XtraEditors.ButtonEdit.OnClickButton(EditorButtonObjectInfoArgs buttonInfo)
+   在 DevExpress.XtraEditors.ButtonEdit.OnMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 DevExpress.Utils.Controls.ControlBase.WndProc(Message& m)
+   在 DevExpress.XtraEditors.TextEdit.WndProc(Message& msg)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   在 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   在 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   在 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   在 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   在 System.Windows.Forms.Application.Run(Form mainForm)
+   在 ApplyDemo.Program.StartApp() 位置 E:\Stack\_Practice\PartitionModel\ApplyDemo\Program.cs:行号 61
+
+19:05:12:602
+ 
+
+Error: Bad login user (-9).
+Error: Could not create a connection on server 192.98.8.214, for user prjchzhksd.
+
+
+

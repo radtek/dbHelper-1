@@ -1,0 +1,8 @@
+﻿19:07:31:157
+ 
+
+Error: SDE not running on server (-101).
+Error: Could not create a connection on server 192.98.12.50, for user PRJBDK.
+
+
+

@@ -1,0 +1,3 @@
+﻿System.ArgumentNullException: 值不能为 null。
+   在 System.Threading.Monitor.Enter(Object obj)
+   在 Geoway.ADF.MIS.Hasp.Public.HaspLicense.DisposeLicense()

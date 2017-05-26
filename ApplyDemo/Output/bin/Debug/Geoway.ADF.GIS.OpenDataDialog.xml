@@ -1,0 +1,938 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Geoway.ADF.GIS.OpenDataDialog</name>
+    </assembly>
+    <members>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterRasterImage">
+            <summary>
+            Image栅格数据
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter">
+            <summary>
+            数据对象过滤条件接口
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter.CanDisplayObject(Geoway.ADF.GIS.OpenDataDialog.IGWObject)">
+            <summary>
+            对象是否可用
+            </summary>
+            <param name="Gwobject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter.CanChooseObject(Geoway.ADF.GIS.OpenDataDialog.IGWObject,Geoway.ADF.GIS.OpenDataDialog.Private.enumDoubleClickResult@)">
+            <summary>
+            对象是否可选
+            </summary>
+            <param name="Gwobject"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter.UserDefinedName">
+            <summary>
+            用户自定义名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter.GWObjectCollection">
+            <summary>
+            对象集合
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter.BeFilterGWObject">
+            <summary>
+            过滤对象
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.enumDoubleClickResult">
+            <summary>
+            双击事件后响应的类型枚举
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.Private.enumDoubleClickResult.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.Private.enumDoubleClickResult.ChooseAndDismiss">
+            <summary>
+            选择和不缺省
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.Private.enumDoubleClickResult.ShowChildren">
+            <summary>
+            展现子列
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.Private.enumDoubleClickResult.Nothing">
+            <summary>
+            缺省
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GwFilterFactory">
+            <summary>
+            过滤器工厂
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.GwFilterFactory.Create(Geoway.ADF.GIS.OpenDataDialog.enumFilter)">
+            <summary>
+            创建数据对象过滤条件
+            </summary>
+            <param name="iFilter">过滤类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.enumFilter">
+            <summary>
+            过滤器枚举
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Unknown">
+            <summary>
+            未知类型
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.PersonalGeodatabase">
+             <summary>
+            个人数据库 
+             </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.FileGeodatabase">
+             <summary>
+            文件型数据库 
+             </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.SpatialDatabaseConnection">
+            <summary>
+            空间数据库连接
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.FeatureDataset">
+            <summary>
+            要素数据集
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.FeatureClass">
+            <summary>
+            要素类
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.FeatureDatasetAndFeatureClass">
+            <summary>
+            要素类和要素集
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Table">
+             <summary>
+            属性表 
+             </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Shapefile">
+            <summary>
+            Shapefile文件
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.PointFeatureClass">
+             <summary>
+            点要素类 
+             </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.PolylineFeatureClass">
+            <summary>
+            线要素类
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.PolygonFeatureClass">
+            <summary>
+            面要素类
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.AnnotationFeatureClass">
+            <summary>
+            注记要素类
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.RasterCatalog">
+            <summary>
+            栅格目录
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.RasterDataset">
+            <summary>
+            栅格数据集
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Tif">
+            <summary>
+            Tif
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Image">
+            <summary>
+            Image
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Grid">
+            <summary>
+            Grid
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Map">
+            <summary>
+            地图文档
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Scene">
+            <summary>
+            场景文档
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Globe">
+            <summary>
+            Globe文档
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.Folder">
+            <summary>
+            文件夹
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.enumFilter.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction">
+            <summary>
+            空间数据连接窗体
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.IsSuccessConnected(System.String,System.String,System.String,System.String,System.String,System.String,ESRI.ArcGIS.esriSystem.IPropertySet@)">
+            <summary>
+            是否成功连接
+            </summary>
+            <param name="server">服务器</param>
+            <param name="instance">实例名称</param>
+            <param name="database">数据库</param>
+            <param name="user">用户名</param>
+            <param name="psw">密码</param>
+            <param name="version">版本</param>
+            <param name="pSet">返回连接参数对象</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.SaveConnectedFile(System.String,System.String,ESRI.ArcGIS.esriSystem.IPropertySet)">
+            <summary>
+            保存连接文件
+            </summary>
+            <param name="strFilePath"></param>
+            <param name="strFileName"></param>
+            <param name="pSet"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.SdeConnectionFilePath">
+            <summary>
+            SDE连接文件路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.FormAddSpatialDBConnenction.CurrentConnectionFilePath">
+            <summary>
+            当前连接文件路径
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.EnumViewState">
+            <summary>
+            图片显示状态
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.EnumViewState.Tile">
+            <summary>
+            平铺
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.EnumViewState.List">
+            <summary>
+            列表
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.EnumViewState.Detail">
+            <summary>
+            详细信息
+            </summary>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.EnumViewState.Default">
+            <summary>
+            标准
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog">
+            <summary>
+            打开数据对话框
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.AddFilter(Geoway.ADF.GIS.OpenDataDialog.enumFilter)">
+            <summary>
+            添加过滤器
+            </summary>
+            <param name="iFilterType"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.AddFilter(Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter)">
+            <summary>
+            添加过滤器
+            </summary>
+            <param name="filter"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.ShowDialog">
+            <summary>
+            显示对话框
+            </summary>
+            <returns>返回打开结果</returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.ShowDialog(System.Windows.Forms.Form)">
+            <summary>
+            显示对话框
+            </summary>
+            <param name="owner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.SetViewState(Geoway.ADF.GIS.OpenDataDialog.EnumViewState)">
+            <summary>
+            设置显示状态
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.Selection">
+            <summary>
+            选择的数据集合
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.Title">
+            <summary>
+            对话框标题
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.AllowMultiSelect">
+            <summary>
+            是否允许多选
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.RestoreLocation">
+            <summary>
+            是否存储当前路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.StartLocation">
+            <summary>
+            设置对话框开始显示路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.FinalLocation">
+            <summary>
+            获取对话框最后打开的路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.OKButtonCaption">
+            <summary>
+            设置确定按钮的名称,默认为"打开"
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.SetSdeConnectionUnvisible">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GwOpenDataDialog.IsDisposed">
+            <summary>
+            资源是否已释放
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.enumOpenDataType">
+            <summary>
+            支持打开的数据类型枚举
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.enumObjectCategory">
+            <summary>
+            对象类型枚举
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterCadDrawingDatasets">
+            <summary>
+            CAD数据集
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterCadDrawingDatasets.Description">
+            <summary>
+            过滤信息描述
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterCadDrawingDatasets.Name">
+            <summary>
+            过滤名称
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterCoordinateSystems">
+            <summary>
+            坐标系统文件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterCoverages">
+            <summary>
+            Coverage数据集
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterDatasets">
+            <summary>
+            要素集
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterDatasets.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterDatasets.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterDatasets.UserDefinedName">
+            <summary>
+            用户定义名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterDatasets.GWObjectCollection">
+            <summary>
+            对象集
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterDatasetsAndLayers">
+            <summary>
+            要素集和图层
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterE00Files">
+            <summary>
+            E00文件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterFeatureClasses">
+            <summary>
+            所有要素类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterFeatureDatasets">
+            <summary>
+            所有要素集
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterFeatureDatasetsAndFeatureClasses">
+            <summary>
+            所有要素集和要素类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterGeoDatabase">
+            <summary>
+            空间数据库
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterLayers">
+            <summary>
+            图层文件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterMaps">
+            <summary>
+            地图文档
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterRasterCatalog">
+            <summary>
+            所有栅格目录
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterRasterTif">
+            <summary>
+            Tif栅格数据
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterSDCFeatureDatasets">
+            <summary>
+            SDC要素集
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterShapefiles">
+            <summary>
+            Shapefile文件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterTables">
+            <summary>
+            表格数据
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterTablesAndFeatureClasses">
+            <summary>
+            所有表格数据和要素类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterTextFiles">
+            <summary>
+            文本文件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterTINDatasets">
+            <summary>
+            TIN数据集过滤实现类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWObjectArray">
+            <summary>
+            数据对象集合实现类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.IGWObjectArray">
+            <summary>
+            数据对象集合接口
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.IGWObjectArray.AddGWObject(Geoway.ADF.GIS.OpenDataDialog.IGWObject)">
+            <summary>
+            添加定义数据对象。
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.IGWObjectArray.RemoveGwObject(System.Int32)">
+            <summary>
+            移出定义数据对象。
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.IGWObjectArray.Clear">
+            <summary>
+            清空数据对象。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObjectArray.Item(System.Int32)">
+            <summary>
+            获取指定索引值的定义数据对象。
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObjectArray.Count">
+            <summary>
+            数据对象集合包含数据对象的个数。
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWObjectFilter">
+            <summary>
+            数据对象过滤条件实体
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.GWObject">
+            <summary>
+            数据对象类
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.IGWObject">
+            <summary>
+            数据对象接口
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.FullName">
+            <summary>
+            完整路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.Parent">
+            <summary>
+            数据对象的父对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.Name">
+            <summary>
+            数据对象名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.DatasetType">
+            <summary>
+            数据对象类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.DatasetTypeDesc">
+            <summary>
+            数据对象类型描述
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.DatasetName">
+            <summary>
+            数据对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.OpenDataType">
+            <summary>
+            支持打开的数据类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.GWObjectImgName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.Category">
+            <summary>
+            数据对象分类
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.IGWObject.Tag">
+            <summary>
+            数据对象扩展
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.GWObject.#ctor(System.String,Geoway.ADF.GIS.OpenDataDialog.enumObjectCategory)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sFullName">对象全名</param>
+            <param name="sCategory">对象分类类型</param>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.FullName">
+            <summary>
+            数据对象全名
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.Parent">
+            <summary>
+            父对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.Name">
+            <summary>
+             数据对象名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.DatasetType">
+            <summary>
+            数据集类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.DatasetName">
+            <summary>
+            数据集名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.DatasetTypeDesc">
+            <summary>
+            数据集类型描述
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.Tag">
+            <summary>
+            备注对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.OpenDataType">
+            <summary>
+            支持打开的数据类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.Category">
+            <summary>
+            目录对象类型
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.GWObject.GWObjectImgName">
+            <summary>
+            对象图标名称,用于设置打开对话框显示数据类型图标。
+            </summary>
+            <remarks>用于设置打开对话框显示数据类型图标。</remarks>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWOpenDialog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog">
+            <summary>
+            打开对话框接口
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.DoModalOpen(Geoway.ADF.GIS.OpenDataDialog.IGWObjectArray@)">
+            <summary>
+            显示数据加载对话框，并返回获取结果。
+            </summary>
+            <param name="Selection">获得打开的数据对象集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.SetViewState(Geoway.ADF.GIS.OpenDataDialog.EnumViewState)">
+            <summary>
+            设置显示状态
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.AllowMultiSelect">
+            <summary>
+            设置是否可以进行多选
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.ButtonCaption">
+            <summary>
+            是指按钮名称
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.FinalLocation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.ObjectFilter">
+            <summary>
+            当前默认过滤条件对象
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.RememberLocation">
+            <summary>
+            设置是否记忆打开路径
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.StartingLocation">
+            <summary>
+            设置数据打开对话框起始目录
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.Title">
+            <summary>
+            设置数据打开对话框标题
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.SetSdeConnectionUnvisible">
+            <summary>
+            设置SDE数据连接是否可见
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.IsDisposed">
+            <summary>
+            是否已释放资源
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.IGWOpenDialog.Owner">
+            <summary>
+            所属窗体
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.IGwObjectFilterCollection">
+            <summary>
+            过滤数据对象集合接口
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.IGwObjectFilterCollection.AddFilter(Geoway.ADF.GIS.OpenDataDialog.Private.IGWObjectFilter,System.Boolean)">
+            <summary>
+            添加过滤对象
+            </summary>
+            <param name="Filter"></param>
+            <param name="defaultFilter"></param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.IGwObjectFilterCollection.RemoveAllFilters">
+            <summary>
+            删除所有过滤对象集合
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.GWOpenDialog.SetViewState(Geoway.ADF.GIS.OpenDataDialog.EnumViewState)">
+            <summary>
+            设置显示状态
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWOpenDialog.Owner">
+            <summary>
+            所属窗体
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Private.GWOpenDialog.IsDisposed">
+            <summary>
+            是否已释放资源
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterUserDefined">
+            <summary>
+            用户自定义类型
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterGeoDatabasePersonal">
+            <summary>
+            个人空间数据库
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterGeoDatabaseFile">
+            <summary>
+            文件空间数据库
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterGeoDatabaseSDE">
+            <summary>
+            空间数据库
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Geoway.ADF.GIS.OpenDataDialog.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater">
+            <summary>
+            空间数据操作类
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenShapeFileWorkSpace(System.String)">
+            <summary>
+            打开ShapeFile 文件工作目录
+            </summary>
+            <param name="filePath">ShapeFile文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenDirWorkspace(System.String)">
+            <summary>
+            打开文件夹工作空间
+            </summary>
+            <param name="DirPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenPGDBWorkspace(System.String)">
+            <summary>
+            打开MDB文件工作空间
+            </summary>
+            <param name="PersonalDBFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenSDEWorkspace(System.String)">
+            <summary>
+            从SDE文件打开SDE数据库
+            </summary>
+            <param name="SDEFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenArcinfoWorkspace(System.String)">
+            <summary>
+            for ArcInfo coverages and Info tables.
+            </summary>
+            <param name="DirPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenPGDBWorkspaceName(System.String)">
+            <summary>
+            打开MDB文件工作空间
+            </summary>
+            <param name="PersonalDBFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenSDEWorkspaceName(System.String)">
+            <summary>
+            从SDE文件打开SDE数据库
+            </summary>
+            <param name="SDEFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.SpatialDataOperater.OpenArcinfoWorkspaceName(System.String)">
+            <summary>
+            for ArcInfo coverages and Info tables.
+            </summary>
+            <param name="DirPath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.FormGWOpenDialog">
+            <summary>
+            打开文件对话框
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormGWOpenDialog.#ctor">
+            <summary> 
+            Required designer variable.
+            </summary>   
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormGWOpenDialog.GetParentNode(Geoway.ADF.GIS.OpenDataDialog.IGWObject,DevExpress.XtraTreeList.Nodes.TreeListNode)">
+            <summary>
+            获取该对象的父节点
+            </summary>
+            <param name="pOpened">当前对象</param>
+            <param name="CurNode">进行遍历目录树的起始节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormGWOpenDialog.SetViewState(Geoway.ADF.GIS.OpenDataDialog.EnumViewState)">
+            <summary>
+            设置显示状态
+            </summary>
+            <param name="viewState"></param>
+        </member>
+        <member name="F:Geoway.ADF.GIS.OpenDataDialog.Private.FormGWOpenDialog.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormGWOpenDialog.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Geoway.ADF.GIS.OpenDataDialog.Private.FormGWOpenDialog.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterFolders">
+            <summary>
+            文件夹
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterFiles">
+            <summary>
+            所有文件
+            </summary>
+        </member>
+        <member name="T:Geoway.ADF.GIS.OpenDataDialog.Private.GWFilterRasterGrid">
+            <summary>
+            Grid格式栅格数据
+            </summary>
+        </member>
+    </members>
+</doc>
